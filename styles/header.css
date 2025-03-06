@@ -1,0 +1,167 @@
+header {
+    display: grid;
+    grid-template-areas: "left title right";
+    grid-template-columns: auto 600px auto;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(235, 235, 232, 1);
+}
+
+
+
+.head-left {
+    grid-area: left;
+    display: flex;
+    gap: 10px;
+}
+
+.title {
+    grid-area: title;
+    display: block;
+    width: 600px;
+    height: 85px;
+    margin-top: 49px;
+}
+
+.head-right {
+    grid-area: right;
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    justify-content: flex-end;
+}
+
+.head-right h1 {
+    display: inline;
+    margin: 0 5px;
+}
+
+/* Button Styles */
+.btn-head-left {
+    padding: 6px 14px;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgba(65, 48, 38, 1);
+    cursor: pointer;
+    background-color: transparent;
+    transition: transform 0.2s ease-in-out;
+}
+
+.btn-head-left:hover{
+    transform: scale(1.1);
+}
+
+.btn-head-right {
+    padding: 6px 14px;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgba(65, 48, 38, 1);
+    cursor: pointer;
+    background-color: transparent;
+    transition: transform 0.2s ease-in-out;
+}
+.btn-head-right:hover{
+    transform: scale(1.1);
+}
+
+.lng-btn {
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 15px;
+    border: none;
+    font-family: Georgia, serif;
+    color: rgba(65, 48, 38, 1);
+}
+
+.btn-head-left img,
+.btn-head-right img {
+    width: 2em;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Mid Screens (max-width: 1200px): buttons above title */
+@media (max-width: 1200px) {
+    header {
+        grid-template-areas:
+            "left right"
+            "title title";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 10px;
+    }
+
+    /* Make title smaller */
+    .title {
+        width: 50%;
+        max-width: 400px;
+        height: auto;
+        margin: 20px auto 0;
+        justify-self: center;
+    }
+
+    /* Scale buttons down */
+    .btn-head-left,
+    .btn-head-right,
+    .lng-btn {
+        font-size: 14px;
+        padding: 5px 12px;
+    }
+
+    .head-right h1 {
+        font-size: 14px;
+        margin: 0 5px;
+    }
+}
+
+/* Small Screens (max-width: 480px): Scale Down, adjust */
+@media (max-width: 600px) {
+    .title {
+        width: 70%;
+        max-width: 300px;
+        margin-top: 10px;
+    }
+
+    .btn-head-left,
+    .btn-head-right,
+    .lng-btn {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    .head-right h1 {
+        font-size: 12px;
+    }
+
+    .btn-head-left img,
+    .btn-head-right img {
+        width: 3em;
+    }
+    
+    header {
+        grid-template-areas:
+            "left"
+            "right"
+            "title";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        justify-items: center;
+        gap: 10px;
+    }
+    
+    /* For the left group: align hamburger and search to the left and push the language buttons right */
+    .head-left {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .head-left button:nth-child(3) {
+        margin-left: auto;
+    }
+    
+    .head-right {
+        width: 100%;
+        justify-content: center;
+    }
+}
