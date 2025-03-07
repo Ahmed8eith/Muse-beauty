@@ -8,9 +8,9 @@ export const products = () => [
     "aqua Face Cleanser"
 ];
 
-const productImage = "assets/product.png"; 
+const productImage = "../assets/product.png"; 
 const productPrice = "99.99 SAR";
-const heart= "assets/heart 21.png"
+const heart= "../assets/heart 21.png"
 
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("products-container");
