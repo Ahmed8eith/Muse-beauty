@@ -12,6 +12,8 @@ body {
     flex-direction: column;
   }
   
+  /* home page */
+
   main {
     display: grid;
   }
@@ -240,6 +242,78 @@ body {
     margin-bottom: 80px;
   }
 
+  /* About page */
+  .about-title{
+    text-align: center;
+    color: rgba(65, 48, 38, 1);
+    font-family: 'Lato', sans-serif;
+  }
+
+  .sec-1{
+    margin-left: 20px;
+    margin-top: 100px;
+    display: flex;
+    font-family: 'Lato', sans-serif;
+    color: rgba(65, 48, 38, 1);
+  }
+
+  .sec-1>img{
+    width: 45%;
+    height: auto;
+  }
+
+  .vision{
+    width: 30%;
+    margin-left: 10%;
+    font-size: 20px;
+    word-spacing: 5px;
+    line-height: 1.5;
+  }
+
+  .sec-2{
+    margin-left: 20px;
+    margin-top: 100px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Lato', sans-serif;
+    color: rgba(65, 48, 38, 1);
+  }
+
+  .our-product{
+    width: 30%;
+    margin-left: 10%;
+    font-size: 20px;
+    word-spacing: 5px;
+    line-height: 1.5;
+    margin-top: 100px;
+  }
+
+  .sec-2>img{
+    width: 50%;
+    height: auto;
+  }
+
+
+  .sec-3{
+    margin-left: 20px;
+    margin-top: 100px;
+    display: flex;
+    font-family: 'Lato', sans-serif;
+    color: rgba(65, 48, 38, 1);
+    margin-bottom: 200px;
+  }
+
+  .sec-3>h1{
+    margin-top: 100px;
+  }
+
+  .sec-3>img{
+    width: 50%;
+    height: auto;
+  }
+
+
   /*responsive Adjustments*/
   
   @media screen and (max-width: 800px) {
@@ -336,4 +410,49 @@ body {
   }
 
   
-  
+  /* about page responsivness */
+  @media screen and (max-width:900px){
+
+    .sec-1 h1,.sec-1 p{
+      font-size: 15px;
+    }
+
+    .sec-2 h1,.sec-2 p{
+      font-size: 15px;
+    }
+
+    .sec-3 h1,.sec-3 p{
+      font-size: 15px;
+    }
+  }
+
+  @media screen and (max-width:600px){
+    .sec-1{
+      display: grid;
+      place-items: center;
+      width: 100%;
+    }
+
+    .vision{
+      margin-top: 30px;
+      width: 90%;
+    }
+
+    .sec-2{
+      display: flex;
+      flex-direction: column-reverse;
+      place-items: center;
+      width: 100%;
+    }
+
+    .our-product{
+      margin-top: 30px;
+      width: 90%;
+    }
+
+    .sec-3{
+      display: grid;
+      place-items: center;
+      width: 100%;
+    }
+  }
