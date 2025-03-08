@@ -52,3 +52,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+// counter button function for product details and cart pages 
+document.addEventListener("DOMContentLoaded", function() {
+
+  const counterButtons = document.querySelectorAll('.details-add .counter');
+  const counterInput = document.querySelector('.details-add .counter-input');
+
+  counterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      // get the current value as an integer
+      let currentValue = parseInt(counterInput.value) || 1;
+      
+      // Check the button's text to decide increment or decrement
+      if (this.textContent.trim() === '+') {
+        counterInput.value = currentValue + 1;
+      } else if (this.textContent.trim() === '-') {
+        // Prevent value from going below 1
+        if (currentValue > 1) {
+          counterInput.value = currentValue - 1;
+        }
+      }
+    });
+  });
+});

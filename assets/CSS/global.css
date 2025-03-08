@@ -383,6 +383,225 @@ body {
   margin-left: 100px;
 }
 
+.ans-container{
+  margin-bottom: 100px;
+}
+
+
+/* product details page */
+.details-title{
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  margin-top: 50px;
+}
+
+.details-container {
+  display: flex;
+  margin: 30px;
+  padding-bottom: 200px;
+  position: relative; 
+}
+
+.details-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -30px; 
+  width: calc(100% + 60px); 
+  border-bottom: 2px solid gray;
+}
+
+
+
+
+.details-img{
+  width: 90%;
+  margin-right: 80px;
+  height: auto;
+}
+
+.details-image-wrapper{
+  display: flex;
+}
+
+.arrow {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;right: 350%;top: 40%;
+}
+
+
+
+
+.details{
+  display: flex;
+  flex-direction: column;
+  margin-top: -30px;
+  font-family: 'Lato', sans-serif;
+  color: rgba(0, 0, 0, 1);
+}
+
+.details>h1{
+  font-size: 40px;
+}
+
+.details>h2{
+  font-size: 30px;
+}
+
+.details>h3{
+  font-size: 40px;
+  font-weight: 500;
+  margin-top: 0;
+}
+
+.colors {
+  border: 2px solid gray;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5%;
+}
+
+.colors > label {
+  padding: 60px;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  outline: none;
+}
+
+.colors > label:hover {
+  transform: scale(1.05);
+}
+
+/* When the associated radio is checked, show the outline */
+.colors input:checked + label {
+  outline: 2px solid rgb(172, 142, 97);
+  outline-offset: 3px;
+}
+
+
+/* Color-specific styles */
+.colors-red {
+  background-color: rgba(252, 43, 43, 1);
+}
+
+.colors-pink {
+  background-color: rgba(255, 55, 175, 1);
+}
+
+.colors-orange {
+  background-color: rgba(240, 122, 39, 1);
+}
+
+.colors-nod {
+  background-color: rgba(162, 49, 51, 1);
+}
+
+
+.details-add{
+  margin-top: auto;
+
+  display:flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.counter{
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  color: rgba(65, 48, 38, 1);
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 1);
+  transition: transform 0.1s ease-in-out;
+}
+
+.counter:hover{
+  transform: scale(1.03);
+}
+
+.counter-input{
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.details-add-btn{
+  margin-left: 50px;
+  padding: 15px;
+  width: 200px;
+  font-family: 'Lato', sans-serif;
+  color: rgba(65, 48, 38, 1);
+  font-size: 1.5rem;
+  background-color: rgba(65, 48, 38, 1);
+  color: rgba(255, 255, 255, 1);
+  border: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+.details-add-btn:hover{
+  transform: scale(1.05);
+}
+
+.details-add>button{
+  cursor: pointer;
+}
+
+.details-add > input::-webkit-outer-spin-button,
+.details-add > input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.details-add>input{
+  width: 30px;
+  text-align: center;
+}
+
+.details-FAQS{
+  width: 50%;
+  margin-left: 100px;
+  font-family: 'Lato', sans-serif;
+  color: rgba(65, 48, 38, 1);
+}
+
+.question{
+  font-weight: 500;
+}
+
+.details-woman-img{
+  margin-left: 15%;
+  width: 130%;
+  height: auto;
+  display: block;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.woman-container {
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  position: relative;left: 30%;
+}
+
+ 
+
+
+.play-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.play-btn img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 
 
@@ -585,3 +804,74 @@ body {
       font-size: 10px;
     }
   }
+
+  /* product details page */
+
+
+  @media screen and (max-width: 1000px) {
+    .details>h1,.details>h2,.details>h3{
+      font-size: 28px;
+    }
+
+    .details-container{
+      flex-direction: column;
+     }
+
+     .details-img{
+      margin: auto;
+      margin-bottom: 30px;
+      width: 80%;
+     }
+  }
+
+  @media screen and (max-width: 800px) {
+    .details>h1,.details>h2,.details>h3{
+      font-size: 23px;
+    }
+
+   
+
+   
+
+   .woman-container{
+    position: relative; left: 20%;
+   }
+
+    .colors > label {
+      padding: 40px;
+    }
+
+    .play-btn {
+      width: 7rem;
+    }
+  }
+
+  
+  
+  @media screen and (max-width: 480px) {
+    .details>h1,.details>h2,.details>h3{
+      font-size: 18px;
+    }
+
+    .arrow{
+      position: relative;right: 180%;top: 40%;
+    }
+
+    .colors>label{
+      padding: 20px;
+    }
+
+    .arrow>img{
+      width: 20px;
+    
+    }
+
+    .woman-container{
+      position: relative; left: 10%;
+     }
+
+    .play-btn {
+      width: 5rem;
+    }
+  }
+  
