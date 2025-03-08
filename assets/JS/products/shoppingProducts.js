@@ -14,10 +14,10 @@ export const products = () => [
     "aqua Face Cleanser",
 ];
 
-const productImage = "../assets/product.png"; 
+const productImage = "../assets/images/product.png"; 
 const productPrice = "99.99 SAR";
-const heart= "../assets/heart 21.png"
-const cart="../assets/white-cart.png"
+const heart= "../assets/images/heart 21.png"
+const cart="../assets/images/white-cart.png"
 
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("products-container");
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <button class="heart-button"><img class="heart-img" src="${heart}" alt= "heart" "></button>
             </div>
             <button class="cart-btn">Add To Cart <img class="cart" src=${cart} alt="cart"/></button>
-            <h2 class="product-name">${product}</h2>
+            <h2 class="shop-product-name">${product}</h2>
 
             <p class="product-price">${productPrice}</p>
 

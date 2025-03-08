@@ -1,0 +1,587 @@
+body {
+    background-color: rgba(243, 243, 238, 1);
+    
+  }
+  
+  /* removes page's default css */
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* home page */
+
+  main {
+    display: grid;
+  }
+  
+  .home-image {
+    width: 100%;
+  }
+  
+  .home-image,
+  .shop {
+    grid-area: 1 / 1;
+  }
+  
+  .shop {
+    align-self: center;
+    justify-self: start;
+    margin-left: 5%;
+    max-width: 50%;
+    color: #fff;
+  }
+  
+  .body-title {
+    font-family: "Segoe Script", cursive;
+    font-size: 4rem; 
+    margin-bottom: 10px;
+    font-weight: bolder;
+  }
+  
+  .shop-btn {
+    font-family: Georgia, serif;
+    font-weight: bolder;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(65, 48, 38, 1);
+    color: rgba(255, 255, 255, 1);
+    padding: 10px 20px;
+    font-size: 2rem;
+    margin-top: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .shop-btn:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* products */
+  .products-title {
+    text-align: center; 
+    margin: 20px auto;  
+    width: 80%; 
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .title-small {
+    font-size: 32px;
+    font-weight: 500;
+    color: rgba(89, 84, 80, 1);
+    margin: 5px;
+  }
+  
+  .title-mid {
+    font-size: 32px;
+    font-weight: 700;
+    color: rgba(89, 84, 80, 1);
+    margin: 5px;
+  }
+  
+  .title-large {
+    font-size: 64px;
+    font-weight: 600;
+    color: rgba(65, 48, 38, 1);
+    margin: 7px;
+  }
+  
+  .products {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(400px, 1fr));
+    gap: 30px;
+    margin: 70px auto;
+  }
+  
+  .product-card {
+    text-align: center;
+    position: relative;
+  }
+  
+  .img-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 120%; 
+    overflow: hidden;
+  }
+  
+  /* Product image  */
+  .product-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .heart-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .heart-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .heart-img {
+    width: 24px;
+  }
+  
+  .product-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 2;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: rgba(65, 48, 38, 1);
+  }
+  
+  .product-price {
+    font-size: 16px;
+    color: rgba(65, 48, 38, 1);
+    margin-top: 5px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+  }
+    
+
+  /* shopping page */
+
+  .shopping-title {
+    display: flex;
+    width: 100%;
+    flex-direction: column;     
+    align-items: center;    
+    margin-bottom: 20px;   
+    background-color: rgba(252, 252, 249, 1);  
+    margin-top: 5%;  
+    padding-top: 5%;
+    padding-bottom: 10%;
+  }
+  
+  .shopping-title h1 {
+    color: rgba(65, 48, 38, 1);
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 10px;
+    margin-bottom: 50px;
+  }
+  
+  .filters {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;                    
+    max-width: 350px;              
+  }
+  
+  .filter-btn {
+    border: none;
+    cursor: pointer;
+    background: none;
+    transition: transform 0.2s ease-in-out;
+    font-weight: 700;
+  }
+
+  .filter-btn:hover{
+    transform: scale(1.1);
+  }
+  
+  .shop-product-name{
+    font-family: 'Lato', sans-serif;
+    color: rgba(65, 48, 38, 1);
+    margin-top: -40px;
+  }
+
+  .cart-btn {
+    position: relative;bottom: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(65, 48, 38, 1);
+    color: #fff;
+    border: none;
+    font-size: 1.25rem;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+   margin: 0 auto;
+    width: 80%;            
+    box-sizing: border-box;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .cart-btn:hover{
+    transform: scale(1.1);
+  }
+  
+  .cart{
+    width: 30px;
+    height: auto;
+  }
+
+  .load-btn{
+    font-family: 'Lato', sans-serif;
+    padding: 10px;
+    align-self: center;
+    width: 120px;
+    border: none;
+    background-color: rgba(217, 217, 217, 1);
+    cursor: pointer;
+    color: rgba(65, 48, 38, 1);
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 80px;
+    transition: transform 0.1s ease-in-out;
+  }
+
+  .load-btn:hover{
+    transform: scale(1.05);
+  }
+
+  /* About page */
+.about-title {
+  text-align: center;
+  color: rgba(65, 48, 38, 1);
+  font-family: 'Lato', sans-serif;
+  margin-top: 2rem;
+}
+
+/* Section 1: Vision & Image */
+.sec-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  font-family: 'Lato', sans-serif;
+  color: rgba(65, 48, 38, 1);
+}
+
+.sec-1 img {
+  width: 45%;
+  height: auto;
+}
+
+.vision {
+  flex: 1;
+  font-size: 20px;
+  word-spacing: 5px;
+  line-height: 1.5;
+}
+
+/* Section 2: Our Product & Image */
+.sec-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  font-family: 'Lato', sans-serif;
+  color: rgba(65, 48, 38, 1);
+}
+
+.sec-2 img {
+  width: 50%;
+  height: auto;
+}
+
+.our-product {
+  flex: 1;
+  font-size: 20px;
+  word-spacing: 5px;
+  line-height: 1.5;
+}
+
+/* Section 3: Heading & Image */
+.sec-3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  font-family: 'Lato', sans-serif;
+  color: rgba(65, 48, 38, 1);
+}
+
+.sec-3 img {
+  width: 50%;
+  height: auto;
+}
+
+.sec-3 h1 {
+  flex: 1;
+  margin: 0;
+  text-align: center;
+}
+
+/* FAQS page */
+.faqs-title{
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  color: rgba(65, 48, 38, 1);
+}
+
+.faqs-container{
+  margin: 10%;
+  margin-top: 80px;
+  word-spacing: 5px;
+  line-height: 1.5;
+  letter-spacing: 3px;
+  font-family: 'Lato', sans-serif;
+  color: rgba(65, 48, 38, 1);
+}
+
+.faqs-questions{
+  display: flex;
+  justify-content: space-between;
+  margin: 50px;
+  margin-left: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 10px;
+  padding-left: 40px;
+}
+
+.faqs-questions >button{
+  border: none;
+  font-size: 50px;
+  color: rgba(65, 48, 38, 1);
+  background: transparent;
+  cursor: pointer;
+  margin-right: -60px;
+}
+
+.faqs-questions>h3{
+  width: 70%;
+}
+
+.ans {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  margin-left: 100px;
+  margin-bottom: 0;
+}
+
+.ans.show {
+  max-height: 100%;
+  opacity: 1;
+  margin-left: 100px;
+}
+
+
+
+
+  /*responsive Adjustments*/
+
+  /* home page */
+
+  @media screen and (max-width:800px){
+
+    /* adjust text and button sizes for mid screens */
+    .body-title{
+      font-size: 2.5rem;
+    }
+
+    .title-small,.title-mid{
+      font-size: 20px;
+    }
+
+    .title-large{
+      font-size: 30px;
+    }
+
+    .shop-btn{
+      font-size: 1.5rem;
+    }
+
+
+      /* products display in 2 columns instead of 3 on mid screens */
+    .products{
+      grid-template-columns: repeat(2, minmax(300px, 1fr));
+
+    }
+  }
+
+  @media screen and (max-width:480px){
+
+    /* adjust text and button sizes for small screens */
+    .title-small,.title-mid{
+      font-size: 10px;
+    }
+
+    .title-large{
+      font-size: 15px;
+    }
+
+
+    .body-title{
+      font-size: 1.5rem;
+    }
+
+    .shop-btn{
+      font-size: 0.8rem;
+    }
+
+    /* products display in 1 columns instead of 3 on small screens */
+    .products{
+      grid-template-columns: repeat(1, minmax(200px, 1fr));
+
+    }
+  }
+  
+    /* shopping page responsivness */
+
+
+    @media screen and (max-width: 800px) {
+      .cart-btn{
+        margin-top: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+      }
+    }
+
+  @media screen and (max-width: 480px) {
+    .shopping-title h1 {
+      font-size: 20px;
+    }
+
+    .filters{
+      max-width: 250px;
+    }
+
+    .cart-btn{
+      padding-bottom: 4px;
+      padding-top: 4px;
+      margin-top: 32px;
+      font-size: 0.9rem;
+    }
+
+    .cart{
+      width: 20px;
+    }
+
+    .shop-product-name{
+      font-size: 1rem;
+    }
+
+  }
+  
+
+  @media screen and (max-width: 1000px) and (min-width: 700px) {
+    .shopping-title {
+      padding-top: 4%;
+      padding-bottom: 8%;
+      margin-top: 4%;
+    }
+  
+  }
+
+  
+  /* about page responsivness */
+  @media screen and (max-width:900px){
+
+    .sec-1 h1,.sec-1 p{
+      font-size: 15px;
+    }
+
+    .sec-2 h1,.sec-2 p{
+      font-size: 15px;
+    }
+
+    .sec-3 h1,.sec-3 p{
+      font-size: 15px;
+    }
+  }
+
+  @media screen and (max-width:600px){
+    .sec-1{
+      display: grid;
+      place-items: center;
+      width: 100%;
+    }
+
+    .vision{
+      margin-top: 30px;
+      width: 90%;
+    }
+
+    .sec-2{
+      display: flex;
+      flex-direction: column-reverse;
+      place-items: center;
+      width: 100%;
+    }
+
+    .our-product{
+      margin-top: 30px;
+      width: 90%;
+    }
+
+    .sec-3{
+      display: grid;
+      place-items: center;
+      width: 100%;
+    }
+  }
+
+  /* faqs page */
+
+  @media screen and (max-width:800px){
+
+    .faqs-container{
+      letter-spacing:1.5px ;
+      word-spacing: 3.5px;
+    }
+
+    .faqs-title{
+      font-size: 1.5rem;
+    }
+
+    .faqs-sect{
+      font-size: 15px;
+    }
+
+    .faqs-questions{
+      font-size: 12px;
+    }
+  }
+
+  @media screen and (max-width:480px){
+
+    .faqs-container{
+      letter-spacing:1px ;
+      word-spacing: 2px;
+    }
+
+    .faqs-title{
+      font-size: 1rem;
+    }
+
+    .faqs-sect{
+      font-size: 12px;
+    }
+
+    .faqs-questions{
+      font-size: 10px;
+    }
+
+    .ans.show{
+      font-size: 10px;
+    }
+  }
