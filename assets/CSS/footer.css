@@ -117,7 +117,7 @@
     margin-top: -50px;
 }
 
-.contacts{
+.footer-contacts{
     margin-left: 50px;
 }
 
@@ -130,7 +130,7 @@
     height: auto;
 }
 
-.contacts,
+.footer-contacts,
 .payment {
     display: flex;
     gap: 15px;
@@ -248,7 +248,7 @@
       margin-top: 20px;
     }
   
-    .contacts {
+    .footer-contacts {
       margin-left: 0;
     }
   
@@ -257,12 +257,12 @@
     }
   
     /* adjust gap and icon sizes */
-    .contacts,
+    .footer-contacts,
     .payment {
       gap: 10px;
     }
   
-    .contacts img{
+    .footer-contacts img{
         width: 20px;
         height: auto;
     }

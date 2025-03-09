@@ -5,18 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Muse Beauty</title>
   <link rel="stylesheet" href="./assets/CSS/global.css">
+  <link rel="stylesheet" href="./assets/CSS/header.css">
+  <link rel="stylesheet" href="./assets/CSS/footer.css">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
+
+</head>
+<div class="free-shipping">FREE  SHPPING  ON  ORDERS  550  SAR  OR  OVER</div>
+<header>
+    <div class="head-left">
+        <button  class="btn-head-left"><img src="../assets/images/hamburger.png" alt="hamburger"></button>
+        <button  class="btn-head-left"><img src="../assets/images/search.png" alt="search"></button>
+        <button  class="btn-head-left lan-btn">AR</button>
+        <button  class="btn-head-left lan-btn">EN</button>
+    </div>
+
+    <img class="title" src="../assets/images/title.png" alt="Ttitle image">
+    
+    <div class="head-right">
+        <button class="btn-head-right curr-btn">USD</button>
+        <h1>/</h1>
+        <button class="btn-head-right curr-btn">SAR</button>
+        <button class="btn-head-right"><img src="../assets/images/outline.png" alt="outline"></button>
+        <a href="./pages/cart.html" class="btn-head-right"><img src="../assets/images/cart.png" alt="cart"></a>
+    </div>
+
+</header>
 </head>
 <body>
   <script type="module" src="./assets/JS/products/products.js"></script>
 
   <main>
-    <img class="home-image" src="./assets/images/homeImage.webp" alt="homeImage">
+    <div class="home-main">
+      <img class="home-image" src="./assets/images/homeImage.webp" alt="homeImage">
 
     <div class="shop">
       <h1 class="body-title">TAKE CARE OF YOUR FACIAL SKIN</h1>
-      <button class="shop-btn">SHOP NOW</button>
+      <a href="./pages/shopping.html" class="shop-btn">SHOP NOW</a>
+    </div>
     </div>
   </main>
 
@@ -30,5 +56,56 @@
 
 
 
+  <footer>
+    <img class="title" src="../assets/images/title.png" alt="Ttitle image">
+
+    <div class="border">
+    <div class="nav">
+
+        <div class="nav-content">
+            <h1>about</h1>
+            <a href="./pages/about.html" class="nav-btn">about</a>
+        </div>
+
+        <div class="nav-content">
+            <h1>customer care</h1>
+            <a href="./pages/FAQS.html" class="nav-btn">FAQS</a>
+            <a href="./pages/FAQS.html"class="nav-btn">shipping & delivery</a>
+            <a href="./pages/contact.html" class="nav-btn">contact us</a>
+        </div>
+
+        <div class="nav-content">
+            <h1>privacy and terms</h1>
+            <button class="nav-btn">privacy policy</button>
+            <button class="nav-btn">Terms and conditions</button>
+        </div>
+    </div>
+</div>
+
+<div class="subscribe-box">
+
+    <input type="email" class="sub-input" placeholder="E - MAIL">
+    <button type="submit" class="subscribe-button">SUBSCRIBE</button>
+
+  </div>      
+
+  <div class="contacts-payment">
+
+   <div class="footer-contacts">
+    <img src="../assets/images/tiktok.png"alt="tiktok">
+    <img src="../assets/images/instagram.png" alt="instagram">
+    <img src="../assets/images/whats.png" alt="whatsapp">
+   </div>
+
+   <div class="payment">
+    <img src="../assets/images/Yandex.png" alt="yandex">
+    <img src="../assets/images/Visa.png" alt="visa">
+    <img src="../assets/images/Mastercard.png" alt="Mastercard">
+    <img src="../assets/images/ApplePay.png" alt="ApplePay">
+    <img src="../assets/images/PayPal.png"alt="PayPal">
+   </div>
+  </div>
+  <br><br>
+</footer>
 </body>
 </html>
