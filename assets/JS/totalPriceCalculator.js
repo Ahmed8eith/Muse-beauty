@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     /**
      * Calculates the price for a single product (price × quantity).
-     * Updates that product's <p class="cart-price">.
-     */
+     * Updates that product's*/
     function calculateTotal(quantityInput) {
       const quantity = parseInt(quantityInput.value, 10);
       if (isNaN(quantity) || quantity < 1) return;

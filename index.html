@@ -9,14 +9,34 @@
   <link rel="stylesheet" href="./assets/CSS/footer.css">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <script src="./assets/JS/buttonToggles.js"></script>
+  <script src="./assets/JS/menu.js"></script>
 
 
 </head>
 <div class="free-shipping">FREE  SHPPING  ON  ORDERS  550  SAR  OR  OVER</div>
 <header>
     <div class="head-left">
-        <button  class="btn-head-left"><img src="../assets/images/hamburger.png" alt="hamburger"></button>
-        <button  class="btn-head-left"><img src="../assets/images/search.png" alt="search"></button>
+        <button class="btn-head-left hamburger">
+            <img class="head-img" src="../assets/images/hamburger.png" alt="hamburger">
+            <button  class="btn-head-left"><img src="../assets/images/search.png" alt="search"></button>
+
+          </button>
+          <!-- hamburger navigation panel -->
+          <div class="side-nav">
+            <button class="close-btn"><img src="../assets/images/close.png" alt=""></button>
+            <a href="" class="side-btn">Home</a>
+            <a href="./pages/shopping.html" class="side-btn">Products</a>
+            <a href="./pages/about.html" class="side-btn">About</a>
+            <a href="./pages/contact.html" class="side-btn">Contact</a>
+            <a href="./pages/FAQS.html" class="side-btn">FAQS</a>
+
+            <div>
+                <button class="btn-head-right curr-btn side-nav-curr">USD</button>
+                <button class="btn-head-right curr-btn side-nav-curr">SAR</button>
+            </div>
+            
+          </div>
+          
         <button  class="btn-head-left lan-btn">AR</button>
         <button  class="btn-head-left lan-btn">EN</button>
     </div>

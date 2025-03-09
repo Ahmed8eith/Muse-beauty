@@ -1,18 +1,73 @@
 header {
     display: grid;
     grid-template-areas: "left title right";
-    grid-template-columns: auto 600px auto;
     align-items: center;
-    padding: 10px 20px;
     background-color: rgba(235, 235, 232, 1);
     border-top: solid 2.5px #ddd;
+    height: 196px;
+    margin-top: -5%;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: -300px; /* start off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    transition: left 0.3s ease;
+    padding: 20px;
+    z-index: 1000;
+  }
+  
+  /* When active, bring it into view */
+  .side-nav.active {
+    left: 0;
+  }
+
+  .side-nav-curr{
+    display: none;
+  }
+  
+  /* styling for buttons inside the side nav */
+  .side-btn {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    background: transparent;
+  }
+  
+  /* styling for the close button */
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    position: absolute;
+    top: 1px;
+    right: 2px;
+    cursor: pointer;
+  }
+
+  .close-btn>img{
+    width: 30px;
+
+  }
 
 .free-shipping{
     text-align: center;
     font-family: 'Lato', sans-serif;
     color: rgba(65, 48, 38, 1);
-    margin: 5px;
     font-weight: 700;
 }
 
@@ -25,9 +80,9 @@ header {
 .title {
     grid-area: title;
     display: block;
-    width: 600px;
+    width: 400px;
     height: 85px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .head-right {
@@ -97,15 +152,23 @@ header {
             "title title";
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto;
-        gap: 10px;
+        margin-top: 0%;
+        height: 250px;
+    }
+
+    header{
+        height: 100px;
+    }
+
+    .title{
+        margin-top: -10%;
+        margin-bottom: 0;
     }
 
     /* Make title smaller */
     .title {
         width: 50%;
         max-width: 400px;
-        height: auto;
-        margin: 20px auto 0;
         justify-self: center;
     }
 
@@ -123,56 +186,67 @@ header {
     }
 }
 
-/* Small Screens (max-width: 480px): Scale Down, adjust */
-@media (max-width: 600px) {
+
+@media screen and (max-width:800px) {
+    header {
+      grid-template-columns: auto auto auto;
+    }
+    
+    .title {
+        margin-top: -10%;
+      width: 200px !important; 
+      height: 50px !important; 
+    }
+  }
+  
+
+@media screen and (max-width:600px){
+    /* For side navigation buttons, override .curr-btn hiding rule */
+    .side-nav .side-nav-curr.curr-btn {
+        display: flex;
+    }
+
+
+    header{
+        height: 80px;
+    }
+
+    .title{
+        width: 50px;
+       }
+    
+    /* For all other curr-btn elements, keep them hidden */
+    .curr-btn {
+        display: none;
+    }
+    
+    .head-right > h1 {
+        display: none;
+    }
+
     .title {
         width: 70%;
         max-width: 300px;
-        margin-top: 10px;
     }
-
     .btn-head-left,
     .btn-head-right,
     .lng-btn {
         font-size: 12px;
         padding: 4px 8px;
     }
-
     .head-right h1 {
         font-size: 12px;
     }
-
     .btn-head-left img,
     .btn-head-right img {
         width: 3em;
     }
-    
-    header {
-        grid-template-areas:
-            "left"
-            "right"
-            "title";
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-        justify-items: center;
-        gap: 10px;
-    }
-    
-    /* For the left group: align hamburger and search to the left and push the language buttons right */
-    .head-left {
-        width: 100%;
-        justify-content: flex-start;
-    }
-    .head-left button:nth-child(3) {
-        margin-left: auto;
-    }
-    
-    .head-right {
-        width: 100%;
-        justify-content: center;
-    }
 }
 
+
+
+/* Small Screens (max-width: 480px): Scale Down, adjust */
+    
 @media (max-width: 480px) {
     .free-shipping{
         font-size: 0.7rem;

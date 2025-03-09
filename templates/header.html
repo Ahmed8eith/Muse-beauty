@@ -6,14 +6,34 @@
     <title>Muse Beauty</title>
     <link rel="stylesheet" href="../assets/CSS/header.css">
     <link rel="stylesheet" href="../assets/CSS/global.css">
+    <script src="../assets/JS/menu.js" defer></script>
     <script src="../assets/JS/buttonToggles.js"></script>
 
 </head>
-<div class="free-shipping">FREE  SHPPING  ON  ORDERS  550  SAR  OR  OVER</div>
+
+<body>
+    <div class="free-shipping">FREE  SHPPING  ON  ORDERS  550  SAR  OR  OVER</div>
 <header>
     <div class="head-left">
-        <button  class="btn-head-left"><img src="../assets/images/hamburger.png" alt="hamburger"></button>
-        <button  class="btn-head-left"><img src="../assets/images/search.png" alt="search"></button>
+        <button class="btn-head-left hamburger">
+            <img class="head-img" src="../assets/images/hamburger.png" alt="hamburger">
+            <button  class="btn-head-left"><img src="../assets/images/search.png" alt="search"></button>
+
+          </button>
+          <!-- hamburger navigation panel -->
+          <div class="side-nav">
+            <button class="close-btn"><img src="../assets/images/close.png" alt=""></button>
+            <a href="" class="side-btn">Home</a>
+            <a href="" class="side-btn">Products</a>
+            <a href="" class="side-btn">About</a>
+            <a href="" class="side-btn">Contact</a>
+            <div>
+                <button class="btn-head-right curr-btn side-nav-curr">USD</button>
+                <button class="btn-head-right curr-btn side-nav-curr">SAR</button>
+            </div>
+            
+          </div>
+          
         <button  class="btn-head-left lan-btn">AR</button>
         <button  class="btn-head-left lan-btn">EN</button>
     </div>
@@ -29,7 +49,5 @@
     </div>
 
 </header>
-<body>
-    
 </body>
 </html>
