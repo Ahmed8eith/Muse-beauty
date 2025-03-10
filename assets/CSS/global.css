@@ -979,6 +979,7 @@ img, video, iframe {
   width: 30%;
   max-height: 800px;
   background-color: rgba(240, 240, 239, 1);
+  
 }
 
 .checkout-btn{
@@ -998,6 +999,7 @@ img, video, iframe {
 .checkout-btn:hover{
   transform: scale(1.05)
 }
+
 
 .summary-details{
   margin-left: 7%;
