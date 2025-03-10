@@ -36,10 +36,12 @@ document.addEventListener("DOMContentLoaded", () => {
             </p>
           </div>
           <div class="cart-buttons">
-            <button class="counter">-</button>
-            <input class="cart-input counter-input" type="number" value="1" min="1">
-            <button class="counter">+</button>
-            <p class="cart-price">${product.price} sar</p>
+              <div class='counter-group'>
+                  <button class="counter">-</button>
+                  <input class="counter-input " type="number" value="1" min="1">
+                  <button class="counter">+</button>
+              </div>
+            <p class="price-price">${product.price} sar</p>
           </div>
         </div>
       </div>

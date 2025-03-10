@@ -2,6 +2,31 @@ body {
     background-color: rgba(243, 243, 238, 1);
     
   }
+
+  
+  
+
+  @font-face {
+    font-family: 'Kaelia';
+    src: url('../fonts/Kaelia/TTF/KaeliaRegular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Kaelia';
+    src: url('../fonts/Kaelia/TTF/KaeliaSemibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Kaelia';
+    src: url('../fonts/Kaelia/TTF/KaeliaBold.ttf') format('truetype');
+    font-weight: 700; 
+    font-style: normal;
+  }
+  
   
   
 
@@ -64,32 +89,32 @@ img, video, iframe {
     align-self: center;
     justify-self: start;
     margin-left: 5%;
-    /* Use percentage so it scales with viewport */
     max-width: 50%;
     color: #fff;
+
   }
   
   /* Responsive title styling */
   .body-title {
-    font-family: 'Lato', sans-serif;
-    font-size: 4rem;
+    font-family: 'Kaelia';
+    font-size: 7rem;
     margin-bottom: 20px;
     font-weight: bolder;
     /* Replace fixed width with a max-width and 100% width */
     width: 100%;
-    max-width: 500px;
+    max-width: 800px;
   }
   
   /* Shop button styling */
   .shop-btn {
-    font-family: Georgia, serif;
-    font-weight: bolder;
+    font-family: 'Kaelia';
+    font-weight: 700;
     border: none;
     cursor: pointer;
     background-color: rgba(65, 48, 38, 1);
     color: #fff;
     padding: 10px 20px;
-    font-size: 2rem;
+    font-size: 4rem;
     margin-top: 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
@@ -107,6 +132,12 @@ img, video, iframe {
     font-family: 'Lato', sans-serif;
   }
   
+
+  .products-wrapper{
+    margin-top: 150px;
+  }
+
+  
   .title-small {
     font-size: 32px;
     font-weight: 500;
@@ -119,6 +150,7 @@ img, video, iframe {
     font-weight: 700;
     color: rgba(89, 84, 80, 1);
     margin: 5px;
+    margin-bottom: 100px;
   }
   
   .title-large {
@@ -128,15 +160,24 @@ img, video, iframe {
     margin: 7px;
   }
   
+
+  @media screen and (max-width:480px){
+    .title-mid{
+      margin-bottom: 0;
+    }
+  }
+
+
   /* Use an auto-fit grid that adapts to available width */
   .products {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
     gap: 30px;
-    margin: 20px auto;
+    margin: 20px auto;  /* Centers the container horizontally */
     padding: 0 20px;
-    margin-left: 80px;
+    /* Removed margin-left: 80px; */
   }
+  
 
   .shop-product-price{
     margin-right: 20%;
@@ -144,15 +185,16 @@ img, video, iframe {
   
   .product-card {
     text-align: center;
-    position: relative;
   }
   
   .img-container {
     position: relative;
-    width: 80%;
-    padding-bottom: 120%; 
+    width: 80%;       /* your chosen width */
+    padding-bottom: 120%;
     overflow: hidden;
+    margin: 0 auto;   /* center this container within .product-card */
   }
+  
   
   /* Product image  */
   .product-image {
@@ -181,7 +223,13 @@ img, video, iframe {
   }
   
   .heart-img {
-    width: 24px;
+    width: 42px;
+  }
+
+  @media  screen and (max-width:480px)  {
+    .heart-img {
+      width: 32px;
+    }
   }
   
   .product-name {
@@ -196,15 +244,17 @@ img, video, iframe {
     color: rgba(65, 48, 38, 1);
   }
   
-  .product-price {
+  .home-product-price {
     font-size: 16px;
     color: rgba(65, 48, 38, 1);
     margin-top: 5px;
-    /* Avoid using negative margins which can force overflow */
-    /* margin-left: -15%; */
     font-family: 'Lato', sans-serif;
     font-weight: 500;
+    text-align: center; 
+    display: block;
+    margin: 5px auto 0;
   }
+  
   
   /* RESPONSIVE ADJUSTMENTS */
   
@@ -259,6 +309,14 @@ img, video, iframe {
     margin-top: 5%;  
     padding-top: 5%;
     padding-bottom: 10%;
+    font-size: 48px;
+  }
+
+  .shop-product-price{
+    margin: 0 auto;
+    color: rgba(65, 48, 38, 1);
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
   }
   
   
@@ -267,6 +325,7 @@ img, video, iframe {
     font-family: 'Lato', sans-serif;
     letter-spacing: 10px;
     margin-bottom: 50px;
+    font-size: 48px;
   }
   
   .filters {
@@ -284,6 +343,7 @@ img, video, iframe {
     background: none;
     transition: transform 0.2s ease-in-out;
     font-weight: 700;
+    font-size: 32px;
   }
 
   .filter-btn:hover{
@@ -294,7 +354,6 @@ img, video, iframe {
     font-family: 'Lato', sans-serif;
     color: rgba(65, 48, 38, 1);
     margin-top: -40px;
-    margin-left: -20%;
   }
 
   .cart-btn {
@@ -308,11 +367,24 @@ img, video, iframe {
     font-size: 1.25rem;
     padding: 0.75rem 1rem;
     cursor: pointer;
-    margin-left: 30px;
+    margin: 0 auto;
     width: 60%;            
     box-sizing: border-box;
     transition: transform 0.2s ease-in-out;
   }
+
+
+
+  @media screen and (max-width:800px){
+    .shopping-title{
+      font-size: 35px;
+    }
+
+    .filter-btn{
+      font-size:  25px;
+    }
+  }
+   
 
   @media screen and (max-width:340px){
     .cart-btn{
@@ -330,10 +402,9 @@ img, video, iframe {
     height: auto;
   }
 
-  .load-more-btn{
+  .load-more-btn {
     font-family: 'Lato', sans-serif;
     padding: 10px;
-    align-self: center;
     width: 120px;
     border: none;
     background-color: rgba(217, 217, 217, 1);
@@ -341,12 +412,12 @@ img, video, iframe {
     color: rgba(65, 48, 38, 1);
     font-weight: 700;
     font-size: 15px;
-    margin-bottom: 80px;
+    display: block;
+    margin: 115px auto 80px auto;
+    text-align: center;
     transition: transform 0.1s ease-in-out;
-    margin-right: 50%;
-    display: block;      
-    margin: 0 auto; 
   }
+  
 
   .load-more-btn:hover{
     transform: scale(1.05);
@@ -358,6 +429,11 @@ img, video, iframe {
   color: rgba(65, 48, 38, 1);
   font-family: 'Lato', sans-serif;
   margin-top: 2rem;
+  font-weight: 800;
+}
+
+.about-title>h4{
+  font-size: 24px;
 }
 
 /* Section 1: Vision & Image */
@@ -370,10 +446,13 @@ img, video, iframe {
   padding: 2rem 1rem;
   font-family: 'Lato', sans-serif;
   color: rgba(65, 48, 38, 1);
+  width: 70%;
+  margin: 0 auto; 
 }
 
+
 .sec-1 img {
-  width: 45%;
+  width: 50%;
   height: auto;
 }
 
@@ -381,7 +460,10 @@ img, video, iframe {
   flex: 1;
   font-size: 20px;
   word-spacing: 5px;
-  line-height: 1.5;
+  line-height: 40px;
+  font-size: 24px;
+  margin-left: 100px;
+
 }
 
 /* Section 2: Our Product & Image */
@@ -394,18 +476,24 @@ img, video, iframe {
   padding: 2rem 1rem;
   font-family: 'Lato', sans-serif;
   color: rgba(65, 48, 38, 1);
+  width: 70%;
+  margin: 0 auto; 
 }
 
 .sec-2 img {
-  width: 50%;
+  width: 55%;
   height: auto;
 }
 
 .our-product {
   flex: 1;
-  font-size: 20px;
+  font-size: 24px;
   word-spacing: 5px;
-  line-height: 1.5;
+  line-height: 40px;
+}
+
+.our-product-right{
+  margin-left: 100px;
 }
 
 /* Section 3: Heading & Image */
@@ -418,6 +506,8 @@ img, video, iframe {
   padding: 2rem 1rem;
   font-family: 'Lato', sans-serif;
   color: rgba(65, 48, 38, 1);
+  width: 70%;
+  margin: 0 auto; 
 }
 
 .sec-3 img {
@@ -431,11 +521,36 @@ img, video, iframe {
   text-align: center;
 }
 
+@media screen and (max-width:1200px){
+  .vision{
+    line-height: 30px;
+  }
+
+  .vision>h1{
+    font-size: 35px;
+  }
+
+  .our-product{
+    line-height: 30px;
+  }
+
+  
+  .our-product>h1{
+    font-size: 35px;
+  }
+ 
+}
+
 /* FAQS page */
 .faqs-title{
   text-align: center;
   font-family: 'Lato', sans-serif;
   color: rgba(65, 48, 38, 1);
+  font-size: 64px;
+}
+
+.faqs-sect{
+  font-size: 40px;
 }
 
 .faqs-container{
@@ -471,6 +586,11 @@ img, video, iframe {
   width: 70%;
 }
 
+
+.question{
+  font-size: 40px;
+  font-family: 'Kaelia';
+}
 .ans {
   max-height: 0;
   opacity: 0;
@@ -478,6 +598,7 @@ img, video, iframe {
   transition: max-height 0.5s ease, opacity 0.5s ease;
   margin-left: 100px;
   margin-bottom: 0;
+  font-size: 30px;
 }
 
 .ans.show {
@@ -546,17 +667,26 @@ img, video, iframe {
 }
 
 .details>h1{
-  font-size: 40px;
+  font-size: 64px;
+  font-family: 'Kaelia';
+  font-weight: 600;
 }
 
 .details>h2{
-  font-size: 30px;
+  font-size: 40px;
+  font-family: 'Kaelia';
+  font-weight: 600;
+  width: 70%;
 }
 
 .details>h3{
-  font-size: 40px;
+  font-size: 64px;
   font-weight: 500;
   margin-top: 0;
+}
+
+.details>h4{
+  font-size: 32px;
 }
 
 .colors {
@@ -565,6 +695,7 @@ img, video, iframe {
   display: flex;
   justify-content: space-between;
   margin-bottom: 5%;
+  margin-right: 15%;
 }
 
 .colors > label {
@@ -613,31 +744,81 @@ img, video, iframe {
   justify-content: start;
 }
 
-.counter{
-  cursor: pointer;
-  padding: 15px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+.counter-group {
+  display: inline-flex;      /* Display the 3 items in a row */
+  border: 1px solid #ccc;    /* Overall border */
+  border-radius: 4px;        /* Slightly rounded corners (optional) */
+  overflow: hidden;          /* Ensures corners are clipped if radius is used */
+}
+
+/* Shared styles for the minus/plus buttons and the input */
+.counter-group .counter,
+.counter-group .counter-input {
+  border: none;
+  background-color: #fff;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px 10px;   
+}
+
+.counter-input {
+  /* For Firefox */
+  -moz-appearance: textfield;
+  /* For general appearance reset */
+  appearance: none;
+
+  font-size: 20rem;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+/* For Chrome, Safari, Edge (WebKit-based) */
+.counter-input::-webkit-inner-spin-button,
+.counter-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
   margin: 0;
-  font-family: 'Lato', sans-serif;
-  color: rgba(65, 48, 38, 1);
-  font-size: 1.5rem;
-  background-color: rgba(255, 255, 255, 1);
+}
+
+
+/* The input specifically */
+.counter-group .counter-input {
+  width: 50px;         
+  -webkit-appearance: none; 
+  -moz-appearance: textfield;
+  appearance: none;     
+}
+
+.counter-group .counter {
+  cursor: pointer;
+  width: 40px; 
+  text-align: center;
+  font-size: 2rem;  
+  padding: 10px 0;
+  border: none;
+  background-color: #fff;
   transition: transform 0.1s ease-in-out;
 }
 
-.counter:hover{
-  transform: scale(1.03);
+
+
+.counter-group .counter:hover {
+  background-color: #f2f2f2;
 }
 
-.counter-input{
-  background-color: rgba(255, 255, 255, 1);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+
+.counter-group .counter:not(:last-child),
+.counter-group .counter-input {
+  border-right: 1px solid #ccc;
 }
+
+
+
+
+
+
 
 .details-add-btn{
   margin-left: 50px;
-  padding: 15px;
-  width: 200px;
   font-family: 'Lato', sans-serif;
   color: rgba(65, 48, 38, 1);
   font-size: 1.5rem;
@@ -645,6 +826,8 @@ img, video, iframe {
   color: rgba(255, 255, 255, 1);
   border: none;
   transition: transform 0.2s ease-in-out;
+  font-size: 40px;
+  padding: 15px;
 }
 
 .details-add-btn:hover{
@@ -679,7 +862,7 @@ img, video, iframe {
 
 .details-woman-img{
   margin-left: 15%;
-  width: 130%;
+  width: 150%;
   height: auto;
   display: block;
   grid-area: 1 / 1 / 2 / 2;
@@ -692,6 +875,13 @@ img, video, iframe {
   position: relative;left: 30%;
 }
 
+
+@media screen and (max-width:550px){
+  .details-add-btn{
+    padding: 5px;
+    font-size: 20px;
+  }
+}
  
 
 
@@ -712,8 +902,9 @@ img, video, iframe {
 .contact-title{
   text-align: center;
   color: rgba(65, 48, 38, 1);
-  font-family:'Lato', sans-serif  ;
+  font-family:'Kaelia'  ;
   margin-bottom: 3%;
+  font-size: 48px;
 }
 
 .line {
@@ -725,6 +916,7 @@ img, video, iframe {
 .line h1 {
   margin: 0;
   margin-right: 1rem;
+  font-size: 24px;
 }
 
 .line hr {
@@ -743,12 +935,12 @@ img, video, iframe {
   margin: 5%;
   color: rgba(65, 48, 38, 1);
   font-family: 'Lato', sans-serif;
-  width: 40%;
+  width: 50%;
   position: relative; 
 }
 
 .contact-left h3{
-  font-weight: 100;
+  font-weight: 400;
 }
 
 .short-vertical-line {
@@ -781,15 +973,21 @@ img, video, iframe {
 .contact-input{
   height: 40px;
   width: 70%;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.6);
 }
 
 .message-input{
   height: 200px;
   width: 87%;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+
 }
 
 .textarea{
   margin-top: 15%;
+  font-weight: 400;
 }
 
 .contact-input,
@@ -801,11 +999,12 @@ img, video, iframe {
   margin-top: 10%;
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-right: 10px;
   width: 6rem;
   color: rgba(65, 48, 38, 1);
-  font-family: 'Lato', sans-serif;
+  font-family: 'Kaelia';
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 32px;
   background-color: rgba(217, 217, 217, 1);
   border: none;
   cursor: pointer;
@@ -859,12 +1058,12 @@ img, video, iframe {
   margin-right: 5%;
   margin-top: 15%;
   margin-bottom: 20%;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 40px;
 }
 
 .contacts{
-  gap: 100px;
+  gap: 72px;
   margin-top: 15%;
   display: flex;
   flex-direction: column;
@@ -956,9 +1155,7 @@ img, video, iframe {
 
 }
 
-.cart-price{
-  margin-left: 30px;  
-}
+
 
 /* remove default increment/decrement arrows */
 .cart-input::-webkit-outer-spin-button,
@@ -972,6 +1169,10 @@ img, video, iframe {
   justify-content: center;
   align-items: center;
   margin: 0;
+}
+
+.price-price{
+  margin-left: 10px;
 }
 
 .order-summary{
@@ -1092,6 +1293,8 @@ img, video, iframe {
   margin: 0;
 }
 
+
+
   /*responsive Adjustments*/
 
   /* home page */
@@ -1171,6 +1374,8 @@ img, video, iframe {
     /* shopping page responsivness */
 
 
+   
+
     @media screen and (max-width: 800px) {
       .cart-btn{
         margin-top: 20px;
@@ -1191,10 +1396,12 @@ img, video, iframe {
       margin: 0 auto;          
     }
     
-    
+    .filter-btn{
+      font-size: 15px;
+    }
 
     .shopping-title h1 {
-      font-size: 20px;
+      font-size: 25px;
     }
 
     .filters{
@@ -1230,22 +1437,8 @@ img, video, iframe {
 
   
   /* about page responsivness */
-  @media screen and (max-width:900px){
 
-    .sec-1 h1,.sec-1 p{
-      font-size: 15px;
-    }
-
-    .sec-2 h1,.sec-2 p{
-      font-size: 15px;
-    }
-
-    .sec-3 h1,.sec-3 p{
-      font-size: 15px;
-    }
-  }
-
-  @media screen and (max-width:600px){
+  @media screen and (max-width:1000px){
     .sec-1{
       display: grid;
       place-items: center;
@@ -1253,8 +1446,13 @@ img, video, iframe {
     }
 
     .vision{
+      margin-right: 50px;
       margin-top: 30px;
       width: 90%;
+    }
+
+    .our-product{
+      margin: 20px;
     }
 
     .sec-2{
@@ -1286,15 +1484,19 @@ img, video, iframe {
     }
 
     .faqs-title{
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
 
     .faqs-sect{
-      font-size: 15px;
+      font-size: 30px;
     }
 
     .faqs-questions{
       font-size: 12px;
+    }
+
+    .ans{
+      font-size: 20px;
     }
   }
 
@@ -1306,19 +1508,20 @@ img, video, iframe {
     }
 
     .faqs-title{
-      font-size: 1rem;
+      font-size: 2rem;
     }
 
     .faqs-sect{
-      font-size: 12px;
+      font-size: 25px;
     }
 
-    .faqs-questions{
-      font-size: 10px;
+    .question{
+      font-size: 30px ;
+      line-height: 30px;
     }
 
     .ans.show{
-      font-size: 10px;
+      font-size: 20px;
     }
   }
 

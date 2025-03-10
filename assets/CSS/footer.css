@@ -1,134 +1,141 @@
+footer {
+  background-color: rgba(235, 235, 232, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  flex-direction: column;
+  padding: 40px 20px;  /* Increased top/bottom padding */
+  min-height: 1200px;  /* Increased overall footer height */
+}
 
-  
-  footer {
-    background-color: rgba(235, 235, 232, 1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: auto;
-    flex-direction: column;
-    padding-top: 15px; /* reduced from 25px */
-  }
-  
-  .title {
-    display: block;
-    width: 400px; /* reduced from 600px */
-    padding-top: 40px; /* reduced from 70px */
-    padding-bottom: 40px; /* reduced from 70px */
-  }
-  
-  /* displays navbar section in a nice column grid */
-  .nav {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 800px; /* reduced from 900px */
-    margin: 15px auto 0 auto; /* slightly reduced top margin */
-    padding-top: 40px; /* reduced from 70px */
-    padding-bottom: 80px; /* reduced from 150px */
-  }
-  
-  .border {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    width: 100%;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-  
-  .nav > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .nav h1 {
-    color: rgba(65, 48, 38, 1);
-    font-weight: 400;
-    font-family: sans-serif;
-    font-size: 20px;
-  }
-  
-  .nav-content {
-    gap: 15px; /* reduced from 25px */
-  }
-  
-  .nav-btn {
-    border: none;
-    font-weight: 400;
-    font-size: 14px; /* reduced from 15px */
-    color: rgba(65, 48, 38, 1);
-    cursor: pointer;
-    background-color: transparent;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .nav-btn:hover {
-    transform: scale(1.1);
-  }
-  
-  .subscribe-box {
-    display: inline-flex;
-    border: 1px solid #413026;
-    color: #413026;
-    font-family: sans-serif;
-    align-self: flex-start;
-    margin: 30px; /* reduced from 50px */
-  }
-  
-  .sub-input {
-    border: none;
-    outline: none;
-    padding: 10px; /* reduced from 15px */
-    flex: 1;
-    font-size: 14px;
-    color: #413026;
-    width: 220px; /* reduced from 270px */
-  }
-  
-  .subscribe-button {
-    border: none;
-    outline: none;
-    background-color: rgba(217, 217, 217, 1);
-    padding: 8px 16px; /* reduced from 10px 20px */
-    cursor: pointer;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #413026;
-    border-left: 1px solid #413026;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .subscribe-button:hover {
-    transform: scale(1.01);
-  }
-  
-  .contacts-payment {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    gap: 15px;
-    margin-top: -20px; /* reduced from -50px */
-  }
-  
-  .footer-contacts {
-    margin-left: 30px; /* reduced from 50px */
-  }
-  
-  .payment {
-    margin-right: 20px; /* reduced from 30px */
-  }
-  
-  .payment img {
-    width: 50px; /* reduced from 60px */
-    height: auto;
-  }
-  
-  .footer-contacts,
-  .payment {
-    display: flex;
-    gap: 15px;
-  }
-  
+.title {
+  display: block;
+  width: 600px;        /* Bigger title image */
+  padding-top: 70px;   /* Increased vertical spacing */
+  padding-bottom: 70px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;    /* Wider container */
+  margin: 30px auto 0 auto; /* Increased top margin */
+  padding-top: 70px;   /* Increased padding for a larger gap */
+  padding-bottom: 150px;
+}
+
+.border {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav h1 {
+  color: rgba(65, 48, 38, 1);
+  font-weight: 400;
+  font-family: sans-serif;
+  font-size: 24px;  /* Bigger heading text */
+}
+
+.nav-content {
+  gap: 25px;  /* Increased gap between items */
+}
+
+.nav-btn {
+  border: none;
+  font-weight: 500;
+  font-size: 24px; 
+  color: rgba(65, 48, 38, 1);
+  cursor: pointer;
+  background-color: transparent;
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-btn:hover {
+  transform: scale(1.1);
+}
+
+.subscribe-box {
+  display: inline-flex;
+  color: #413026;
+  font-family: sans-serif;
+  align-self: flex-start;
+  margin: 50px;      
+  padding: 0px;    
+  background-color: transparent;  
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  height: 60px;
+}
+
+.sub-input {
+  border: none;
+  outline: none;
+  padding: 15px;     
+  flex: 1;
+  font-size: 16px;   
+  color: #413026;
+  width: 270px;      
+  background-color: transparent;  
+}
+
+.sub-input::placeholder {
+  color: rgba(65, 48, 38, 1); 
+  opacity: 1;     
+}
+
+
+.subscribe-button {
+  border: none;
+  outline: none;
+  background-color: rgba(217, 217, 217, 1);
+  padding: 10px 20px;  /* Increased padding */
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 16px;     /* Larger text */
+  color: #413026;
+  transition: transform 0.2s ease-in-out;
+}
+
+.subscribe-button:hover {
+  transform: scale(1.01);
+}
+
+.contacts-payment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 25px;          /* Increased gap between contacts and payment */
+  margin-top: -50px;  /* Adjusted margin to align visually */
+}
+
+.footer-contacts {
+  margin-left: 50px;  /* Increased margin */
+}
+
+.payment {
+  margin-right: 30px; /* Increased margin */
+}
+
+.payment img {
+  width: 60px;        /* Bigger payment icons */
+  height: auto;
+}
+
+.footer-contacts,
+.payment {
+  display: flex;
+  gap: 25px;          /* Bigger gap between icons */
+}
+
   /* Responsive adjustments for mid screens */
   @media screen and (max-width: 800px) {
     .title {

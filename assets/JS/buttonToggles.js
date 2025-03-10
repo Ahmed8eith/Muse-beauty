@@ -30,8 +30,17 @@ document.addEventListener('DOMContentLoaded', () => {
   setupToggleContainers('.language-switch-mob', 'white', '#ED8A19');
   setupToggleContainers('.currency-switch-mob', 'white', '#ED8A19');
 
-  //shopping page toggles 
-  
+  // Shopping page toggles - removed the nested DOMContentLoaded!
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const activeColor = "rgba(237, 138, 25, 1)"; 
+  filterBtns.forEach(btn => {
+    btn.addEventListener("click", function() {
+      // Set all buttons to black
+      filterBtns.forEach(b => b.style.color = "black");
+      // Highlight the clicked button
+      this.style.color = activeColor;
+    });
+  });
 
   // FAQ TOGGLE
   const buttons = document.querySelectorAll('.answer-btn');

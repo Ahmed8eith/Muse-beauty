@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <button class="heart-button"><img class="heart-img" src="${heart}" alt="heart"></button>
                 <h2 class="product-name">${product}</h2>
             </div>
-            <p class="product-price">${productPrice}</p>
+            <p class="home-product-price">${productPrice}</p>
         </div>
     `).join('');
 

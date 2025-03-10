@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Map through each product to create HTML for product cards
     const htmlString = products().map(product => `
-        <div class="product-card">
+        <div class="product-card shopping-product">
             <div class="img-container">
                 <img class="product-image" src="${productImage}" alt="${product}">
                 <button class="heart-button">
