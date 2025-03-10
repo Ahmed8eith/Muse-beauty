@@ -1566,10 +1566,19 @@ img, video, iframe {
     }
   }
 
+  @media screen and (max-width:700px){
+    .details-question{
+      font-size: 30px;
+    }
+  }
   
   
   @media screen and (max-width: 480px) {
     .details>h1,.details>h2,.details>h3{
+      font-size: 18px;
+    }
+
+    .details-question{
       font-size: 18px;
     }
 
