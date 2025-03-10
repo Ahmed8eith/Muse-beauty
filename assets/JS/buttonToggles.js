@@ -1,49 +1,54 @@
-//button toggles function, dynamically toggles the color of buttons with different classes for header & shopping page
-
 document.addEventListener('DOMContentLoaded', () => {
-  function setupToggleButtons(selector) {
-    const buttons = document.querySelectorAll(selector);
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-
-        buttons.forEach(btn => btn.style.color = 'rgba(65, 48, 38, 1)');
-
-        button.style.color = 'rgba(237, 138, 25, 1)';
+  /**
+   * Setup toggle functionality for a group of buttons.
+   * @param {string} containerSelector - The container where the <h3> elements are located.
+   * @param {string} defaultColor - The default text color.
+   * @param {string} activeColor - The text color when a button is clicked.
+   */
+  function setupToggleContainers(containerSelector, defaultColor, activeColor) {
+    const containers = document.querySelectorAll(containerSelector);
+    containers.forEach(container => {
+      const items = container.querySelectorAll('h3');
+      items.forEach(item => {
+        // Set default color on page load
+        item.style.color = defaultColor;
+        item.addEventListener('click', () => {
+          // Reset color for all items in this container
+          items.forEach(i => i.style.color = defaultColor);
+          // Highlight the clicked item
+          item.style.color = activeColor;
+        });
       });
     });
   }
+  
+  // Desktop toggles
+  setupToggleContainers('.language-switch', '#413026', '#ED8A19');
+  setupToggleContainers('.currency-switch', '#413026', '#ED8A19');
+  
+  // Mobile side toggles
+  setupToggleContainers('.language-switch-mob', 'white', '#ED8A19');
+  setupToggleContainers('.currency-switch-mob', 'white', '#ED8A19');
 
-  // call the function for each diffrnt class
-  setupToggleButtons('.lan-btn');
-  setupToggleButtons('.curr-btn');
-  setupToggleButtons('.filter-btn');
-});
-
-
-// answer reveal toggle for FAQS page 
-
-document.addEventListener("DOMContentLoaded", () => {
+  // FAQ TOGGLE
   const buttons = document.querySelectorAll('.answer-btn');
   const questions = document.querySelectorAll('.question');
   const answers = document.querySelectorAll('.ans');
 
   buttons.forEach((button, index) => {
     button.addEventListener('click', () => {
-      //checks if a button is already clicked
       if (answers[index].classList.contains('show')) {
         answers[index].classList.remove('show');
         button.style.color = 'rgba(65, 48, 38, 1)';
         questions[index].style.color = 'rgba(65, 48, 38, 1)';
         button.textContent = '+';
       } else {
-        // this function Closes all opened answers when clicking another button
-         buttons.forEach((btn, i) => {
-           btn.style.color = 'rgba(65, 48, 38, 1)';
-           btn.textContent = '+';
-           questions[i].style.color = 'rgba(65, 48, 38, 1)';
-           answers[i].classList.remove('show');
-         });
-        // this toglles the clicked answer
+        buttons.forEach((btn, i) => {
+          btn.style.color = 'rgba(65, 48, 38, 1)';
+          btn.textContent = '+';
+          questions[i].style.color = 'rgba(65, 48, 38, 1)';
+          answers[i].classList.remove('show');
+        });
         button.style.color = 'rgba(237, 138, 25, 1)';
         questions[index].style.color = 'rgba(237, 138, 25, 1)';
         answers[index].classList.add('show');
@@ -51,17 +56,16 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-});
 
-
-// counter button function for product details
-document.addEventListener("DOMContentLoaded", function() {
+  // COUNTER BUTTONS
   function setupCounters(containerSelector) {
     const containers = document.querySelectorAll(containerSelector);
     containers.forEach(container => {
       const counterButtons = container.querySelectorAll('.counter');
       const counterInput = container.querySelector('.counter-input');
-      
+
+      if (!counterInput) return;
+
       counterButtons.forEach(button => {
         button.addEventListener('click', function() {
           let currentValue = parseInt(counterInput.value) || 1;
@@ -76,8 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     });
   }
-  
-  // Initialize counters for both containers
+
   setupCounters('.cart-buttons');
   setupCounters('.details-add');
 });

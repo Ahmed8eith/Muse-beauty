@@ -11,6 +11,7 @@ body {
     font-family: 'Lato', sans-serif;
   }
   
+  
 
   /* removes page's default css */
   html, body {
@@ -24,9 +25,7 @@ body {
     display: grid;
   }
   
-  .title{
-    margin-top: 50px;
-  }
+  
 
   .home-image {
     width: 100%;
@@ -51,6 +50,7 @@ body {
     font-size: 4rem; 
     margin-bottom: 20px;
     font-weight: bolder;
+    width: 500px;
   }
   
   .shop-btn {
@@ -714,7 +714,7 @@ body {
 
 .contact-input,
 .message-input {
-  font-size: 1.2rem; /* Increase or decrease as needed */
+  font-size: 1.2rem; 
 }
 
 .contact-send-btn{
@@ -872,7 +872,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-  height: 55px;
+    height: 60px;
 
 }
 
@@ -1017,7 +1017,6 @@ body {
 
   
   
-  
 
   @media screen and (max-width:800px){
 
@@ -1084,7 +1083,6 @@ body {
     /* products display in 1 columns instead of 3 on small screens */
     .products{
       grid-template-columns: repeat(1, minmax(200px, 1fr));
-
     }
   }
   
@@ -1101,6 +1099,18 @@ body {
     }
 
   @media screen and (max-width: 480px) {
+
+    .products-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;      
+      justify-content: center;  
+      text-align: center;      
+      margin: 0 auto;          
+    }
+    
+    
+
     .shopping-title h1 {
       font-size: 20px;
     }

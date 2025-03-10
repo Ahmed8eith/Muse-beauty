@@ -5,95 +5,90 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: auto; 
+    margin-top: auto;
     flex-direction: column;
-    padding-top: 25px;
+    padding-top: 15px; /* reduced from 25px */
   }
   
   .title {
     display: block;
-    width: 600px;
-    height: 85px;
-    padding-top: 70px;
-    padding-bottom: 70px;
+    width: 400px; /* reduced from 600px */
+    padding-top: 40px; /* reduced from 70px */
+    padding-bottom: 40px; /* reduced from 70px */
   }
-
-  /*displays navbar section in a nice column grid*/
-
+  
+  /* displays navbar section in a nice column grid */
   .nav {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 900px; 
-    margin: 20px auto 0 auto;
-    padding-top: 70px;
-    padding-bottom: 150px;
+    max-width: 800px; /* reduced from 900px */
+    margin: 15px auto 0 auto; /* slightly reduced top margin */
+    padding-top: 40px; /* reduced from 70px */
+    padding-bottom: 80px; /* reduced from 150px */
   }
   
-
-.border{
+  .border {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     width: 100%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    
-
-}
-
+  }
+  
   .nav > div {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-}
-
-.nav h1{
+    align-items: center;
+  }
+  
+  .nav h1 {
     color: rgba(65, 48, 38, 1);
     font-weight: 400;
     font-family: sans-serif;
-}
-
-.nav-content{
-    gap: 25px;
-}
-
-.nav-btn {
-  border: none;
-  font-weight: 400;
-  font-size: 15px;
-  color: rgba(65, 48, 38, 1);
-  cursor: pointer;
-  background-color: transparent;
-  transition: transform 0.2s ease-in-out;
-}
-
-.nav-btn:hover {
-  transform: scale(1.1);
-}
-
-.subscribe-box {
-    display: inline-flex;           
-    border: 1px solid #413026;    
-    color: #413026;  
+    font-size: 20px;
+  }
+  
+  .nav-content {
+    gap: 15px; /* reduced from 25px */
+  }
+  
+  .nav-btn {
+    border: none;
+    font-weight: 400;
+    font-size: 14px; /* reduced from 15px */
+    color: rgba(65, 48, 38, 1);
+    cursor: pointer;
+    background-color: transparent;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .nav-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .subscribe-box {
+    display: inline-flex;
+    border: 1px solid #413026;
+    color: #413026;
     font-family: sans-serif;
     align-self: flex-start;
-    margin: 50px;
-
+    margin: 30px; /* reduced from 50px */
   }
   
   .sub-input {
     border: none;
     outline: none;
-    padding: 15px;
-    flex: 1;          
+    padding: 10px; /* reduced from 15px */
+    flex: 1;
     font-size: 14px;
-    color: #413026; 
-    width: 270px;         
+    color: #413026;
+    width: 220px; /* reduced from 270px */
   }
   
   .subscribe-button {
     border: none;
     outline: none;
-    background-color: rgba(217, 217, 217, 1); 
-    padding: 10px 20px;  
+    background-color: rgba(217, 217, 217, 1);
+    padding: 8px 16px; /* reduced from 10px 20px */
     cursor: pointer;
     text-transform: uppercase;
     font-size: 14px;
@@ -106,35 +101,161 @@
     transform: scale(1.01);
   }
   
-  
-  
   .contacts-payment {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     gap: 15px;
-    margin-top: -50px;
-}
-
-.footer-contacts{
-    margin-left: 50px;
-}
-
-.payment{
-    margin-right: 30px;
-}
-
-.payment img{
-    width: 60px;
+    margin-top: -20px; /* reduced from -50px */
+  }
+  
+  .footer-contacts {
+    margin-left: 30px; /* reduced from 50px */
+  }
+  
+  .payment {
+    margin-right: 20px; /* reduced from 30px */
+  }
+  
+  .payment img {
+    width: 50px; /* reduced from 60px */
     height: auto;
-}
-
-.footer-contacts,
-.payment {
+  }
+  
+  .footer-contacts,
+  .payment {
     display: flex;
     gap: 15px;
-}
+  }
+  
+  /* Responsive adjustments for mid screens */
+  @media screen and (max-width: 800px) {
+    .title {
+      width: 80%;
+      max-width: 350px; /* reduced from 400px */
+      padding-top: 30px; /* reduced from 40px */
+      padding-bottom: 30px; /* reduced from 40px */
+    }
+  
+    .nav {
+      max-width: 100%;
+      flex-wrap: wrap;
+      padding-top: 30px; /* reduced from 40px */
+      padding-bottom: 60px; /* reduced from 80px */
+      gap: 15px;
+    }
+  
+    .nav h1 {
+      font-size: 18px; /* reduced from 20px */
+    }
+  
+    .nav-btn {
+      font-size: 12px; /* reduced from 13px */
+    }
+  
+    .subscribe-box {
+      margin: 20px auto; /* reduced from 30px */
+      width: 90%;
+    }
+  
+    .sub-input {
+      width: 100%;
+      padding: 8px; /* reduced from 10px */
+      font-size: 12px; /* reduced from 13px */
+    }
+  
+    .subscribe-button {
+      padding: 6px 12px; /* reduced from 8px 16px */
+      font-size: 12px; /* reduced from 13px */
+    }
+  
+    .contacts-payment {
+      margin-top: -15px; /* reduced from -30px */
+    }
+  
+    .payment img {
+      width: 40px; /* reduced from 50px */
+      height: auto;
+    }
+  }
+  
+  /* Responsive adjustments for small screens */
+  @media screen and (max-width: 480px) {
+    .title {
+      width: 80%;
+      max-width: 280px; /* reduced from 300px */
+      padding-top: 25px; /* reduced from 30px */
+      padding-bottom: 25px; /* reduced from 30px */
+    }
+  
+    .nav {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 15px; /* reduced from 20px */
+      padding-bottom: 15px; /* reduced from 20px */
+      gap: 15px; /* reduced from 20px */
+    }
+  
+    .nav h1 {
+      font-size: 16px; /* reduced from 18px */
+    }
+  
+    .nav-btn {
+      font-size: 13px; /* reduced from 14px */
+      margin: 3px 0; /* reduced from 5px 0 */
+    }
+  
+    .border {
+      padding: 8px 0; /* reduced from 10px 0 */
+    }
+  
+    .subscribe-box {
+      margin: 15px auto; /* reduced from 20px */
+      width: 90%;
+    }
+  
+    .sub-input {
+      width: 100%;
+      font-size: 13px; /* reduced slightly */
+      padding: 8px; /* reduced from 10px */
+    }
+  
+    .subscribe-button {
+      font-size: 13px; /* reduced from 14px */
+      padding: 6px 12px; /* reduced from 8px 16px */
+    }
+  
+    .contacts-payment {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 15px; /* reduced from 20px */
+    }
+  
+    .footer-contacts {
+      margin-left: 0;
+    }
+  
+    .payment {
+      margin-right: 0;
+    }
+  
+    .footer-contacts,
+    .payment {
+      gap: 10px;
+    }
+  
+    .footer-contacts img {
+      width: 18px; /* reduced from 20px */
+      height: auto;
+    }
+  
+    .payment img {
+      width: 40px; /* reduced from 50px */
+      height: auto;
+    }
+  }
+  
 
 /* Responsive adjustments for mid screens */
 @media screen and (max-width: 800px) {

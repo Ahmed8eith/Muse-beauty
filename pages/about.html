@@ -7,48 +7,65 @@
     <link rel="stylesheet" href="../assets/CSS/global.css">
     <link rel="stylesheet" href="../assets/CSS/header.css">
     <link rel="stylesheet" href="../assets/CSS/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="../assets/JS/buttonToggles.js"></script>
     <script src="../assets/JS/menu.js"></script>
 
 
-    <div class="free-shipping">FREE  SHPPING  ON  ORDERS  550  SAR  OR  OVER</div>
-<header>
-    <div class="head-left">
-        <button class="btn-head-left hamburger">
-            <img class="head-img" src="../assets/images/hamburger.png" alt="hamburger">
-            <button  class="btn-head-left"><img src="../assets/images/search.png" alt="search"></button>
-
-          </button>
-          <!-- hamburger navigation panel -->
-          <div class="side-nav">
-            <button class="close-btn"><img src="../assets/images/close.png" alt=""></button>
-            <a href="../index.html" class="side-btn">Home</a>
-            <a href="../pages/shopping.html" class="side-btn">Products</a>
-            <a href="../pages/about.html" class="side-btn">About</a>
-            <a href="../pages/contact.html" class="side-btn">Contact</a>
-            <a href="../pages/FAQS.html" class="side-btn">FAQS</a>
-            <div>
-                <button class="btn-head-right curr-btn side-nav-curr">USD</button>
-                <button class="btn-head-right curr-btn side-nav-curr">SAR</button>
+    <header>
+        <div id="menu-overlay"></div>
+        <div id="menu-container">
+            <img class="close-btn" src="imgs/close.svg" alt="">
+            <a href="../index.html">Home</a>
+            <a href="./about.html">About Us</a>
+            <a href="./FAQS.html">FAQS</a>
+            <a href="./contact.html">Contact Us</a>
+            <hr>
+        </div>
+        <div class="top-bar">
+            <img class="close-btn" src="imgs/close.svg" alt="">
+            <h2>FREE SHPPING ON ORDERS 550 SAR OR OVER</h2>
+        </div>
+        <div class="header">
+            <div class="menu-search">
+                <img class="menu-toggle" src="../assets/images/hamburger.png" alt="">
+        
+        
+                <div class="search-container">
+                    <span class="search-icon"><img src="../assets/images/search.png" alt=""></span>
+                    <div class="results" id="results"></div>
+                </div>
             </div>
-            
-          </div>
-          
-        <button  class="btn-head-left lan-btn">AR</button>
-        <button  class="btn-head-left lan-btn">EN</button>
-    </div>
-
-    <img class="title" src="../assets/images/title.png" alt="Ttitle image">
-    
-    <div class="head-right">
-        <button class="btn-head-right curr-btn">USD</button>
-        <h1>/</h1>
-        <button class="btn-head-right curr-btn">SAR</button>
-        <button class="btn-head-right"><img src="../assets/images/outline.png" alt="outline"></button>
-        <a href="../pages/cart.html" class="btn-head-right"><img src="../assets/images/cart.png" alt="cart"></a>
-    </div>
-
-</header>
+            <div class="language-switch">
+                <h3>AR</h3>
+                <h3>EN</h3>
+            </div>
+            <a href="../index.html">
+                <img src="../assets/images/title.png" alt="title">
+            </a>
+            <div class="currency-switch">
+                <h3>USD</h3>
+                <h3>SAR</h3>
+            </div>
+            <div class="user-box">
+                <i class="fa-solid fa-user"></i>
+                <a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="language-switch-mob">
+                <h3>AR</h3>
+                <h3>EN</h3>
+            </div>
+            <div class="currency-switch-mob">
+                <h3>USD</h3>
+                <h3>SAR</h3>
+            </div>
+        </div>
+        
+        
+        </header>
 </head>
 <body>
     <div class="about-title">
