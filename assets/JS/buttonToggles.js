@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   /**
    * Setup toggle functionality for a group of buttons.
-   * @param {string} containerSelector - The container where the <h3> elements are located.
-   * @param {string} defaultColor - The default text color.
-   * @param {string} activeColor - The text color when a button is clicked.
+   * @param {string} containerSelector 
+   * @param {string} defaultColor 
+   * @param {string} activeColor 
    */
   function setupToggleContainers(containerSelector, defaultColor, activeColor) {
     const containers = document.querySelectorAll(containerSelector);
@@ -29,6 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mobile side toggles
   setupToggleContainers('.language-switch-mob', 'white', '#ED8A19');
   setupToggleContainers('.currency-switch-mob', 'white', '#ED8A19');
+
+  //shopping page toggles 
+  
 
   // FAQ TOGGLE
   const buttons = document.querySelectorAll('.answer-btn');

@@ -5,6 +5,28 @@ body {
   
   
 
+  /* Ensure all elements use border-box for sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margins/padding and prevent horizontal scrolling */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Fallback if an element slightly overflows */
+}
+
+/* Scale images (and videos/iframes if any) so they never exceed their container */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+
   a {
     text-decoration: none;
     color: inherit;
@@ -19,17 +41,17 @@ body {
     padding: 0;   
   }
   
-  /* home page */
-
-  .home-main{
+  /* HOME PAGE */
+  .home-main {
     display: grid;
+    position: relative;
   }
   
-  
-
+  /* If you no longer need the home image, you can leave this style or remove it */
   .home-image {
     width: 100%;
-    height: 1150px;
+    /* Removed fixed height to let content flow naturally */
+    height: auto;
   }
   
   .home-image,
@@ -37,29 +59,35 @@ body {
     grid-area: 1 / 1;
   }
   
+  /* Overlay shop content */
   .shop {
     align-self: center;
     justify-self: start;
     margin-left: 5%;
+    /* Use percentage so it scales with viewport */
     max-width: 50%;
     color: #fff;
   }
   
+  /* Responsive title styling */
   .body-title {
     font-family: 'Lato', sans-serif;
-    font-size: 4rem; 
+    font-size: 4rem;
     margin-bottom: 20px;
     font-weight: bolder;
-    width: 500px;
+    /* Replace fixed width with a max-width and 100% width */
+    width: 100%;
+    max-width: 500px;
   }
   
+  /* Shop button styling */
   .shop-btn {
     font-family: Georgia, serif;
     font-weight: bolder;
     border: none;
     cursor: pointer;
     background-color: rgba(65, 48, 38, 1);
-    color: rgba(255, 255, 255, 1);
+    color: #fff;
     padding: 10px 20px;
     font-size: 2rem;
     margin-top: 0;
@@ -71,7 +99,7 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   }
   
-  /* products */
+  /* PRODUCTS SECTION */
   .products-title {
     text-align: center; 
     margin: 20px auto;  
@@ -100,12 +128,18 @@ body {
     margin: 7px;
   }
   
+  /* Use an auto-fit grid that adapts to available width */
   .products {
     display: grid;
-    grid-template-columns: repeat(3, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
+    margin: 20px auto;
+    padding: 0 20px;
     margin-left: 80px;
-  
+  }
+
+  .shop-product-price{
+    margin-right: 20%;
   }
   
   .product-card {
@@ -146,8 +180,6 @@ body {
     transform: scale(1.1);
   }
   
-
-
   .heart-img {
     width: 24px;
   }
@@ -168,11 +200,50 @@ body {
     font-size: 16px;
     color: rgba(65, 48, 38, 1);
     margin-top: 5px;
-    margin-left: -15%;
+    /* Avoid using negative margins which can force overflow */
+    /* margin-left: -15%; */
     font-family: 'Lato', sans-serif;
     font-weight: 500;
   }
-    
+  
+  /* RESPONSIVE ADJUSTMENTS */
+  
+  /* For screens up to 1024px */
+  @media screen and (max-width: 1024px) {
+    .body-title {
+      font-size: 3rem;
+      max-width: 80%;
+    }
+    .shop {
+      max-width: 60%;
+    }
+  }
+  
+  /* For screens up to 768px */
+  @media screen and (max-width: 768px) {
+    .body-title {
+      font-size: 2.5rem;
+      max-width: 90%;
+    }
+    .shop {
+      max-width: 80%;
+      margin-left: 5%;
+    }
+  }
+  
+  /* For screens up to 480px */
+  @media screen and (max-width: 480px) {
+    .body-title {
+      font-size: 2rem;
+      max-width: 100%;
+    }
+    .shop {
+      max-width: 100%;
+      margin-left: 5%;
+    }
+  }
+
+  
 
   /* shopping page */
 
@@ -205,6 +276,8 @@ body {
     max-width: 350px;              
   }
   
+  
+
   .filter-btn {
     border: none;
     cursor: pointer;
@@ -235,10 +308,17 @@ body {
     font-size: 1.25rem;
     padding: 0.75rem 1rem;
     cursor: pointer;
-    margin-left: 40px;
+    margin-left: 30px;
     width: 60%;            
     box-sizing: border-box;
     transition: transform 0.2s ease-in-out;
+  }
+
+  @media screen and (max-width:340px){
+    .cart-btn{
+      padding: 5px;
+      margin-left: 20px;
+    }
   }
 
   .cart-btn:hover{

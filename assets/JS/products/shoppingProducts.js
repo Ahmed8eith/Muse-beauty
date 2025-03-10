@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             <button class="cart-btn">Add To Cart <img class="cart" src="${cart}" alt="cart"/></button>
             <h2 class="shop-product-name">${product}</h2>
-            <p class="product-price">${productPrice}</p>
+            <p class="shop-product-price">${productPrice}</p>
         </div>
     `).join('');
 

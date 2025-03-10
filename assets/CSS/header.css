@@ -14,12 +14,19 @@
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+
+
+
 }
 html {
     scroll-behavior: smooth;
 }
 body {
     margin: 0;
+}
+
+header{
+    width: 100%;
 }
 #menu-container {
     display: flex;
@@ -133,6 +140,9 @@ body {
         padding: 25px;
     }
 }
+
+  
+
 .header .menu-search {
     display: flex;
     align-items: center;
