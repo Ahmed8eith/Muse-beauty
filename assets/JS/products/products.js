@@ -12,11 +12,10 @@ const productImage = "./assets/images/product.png";
 const productPrice = "99.99 SAR";
 const heart = "./assets/images/heart 21.png";
 
-// Once the DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("products-container");
 
-    // Create HTML for products
+    // map HTML for products
     const htmlString = products().map(product => `
         <div class="product-card">
             <div class="img-container">
@@ -30,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     container.innerHTML = htmlString;
 
-    // Add click event listener to each product card
+    // add click event listener to each product card (navigates to product details page)
     const productCards = document.querySelectorAll('.product-card');
     productCards.forEach(card => {
         card.addEventListener('click', () => {

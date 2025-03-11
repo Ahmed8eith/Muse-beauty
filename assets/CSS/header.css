@@ -183,7 +183,7 @@ header{
     cursor: pointer;
     transition: 0.2s;
 }
-.header .language-switch h3:first-of-type {
+.header .language-switch h3:last-of-type {
     color: #ED8A19;
 }
 .header .language-switch h3:hover {

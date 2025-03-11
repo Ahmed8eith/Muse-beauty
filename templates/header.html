@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/CSS/header.css">
+    <link rel="stylesheet" href="/assets/CSS/header.css">
     <title>Muse Beauty</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -11,17 +11,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="../assets/JS/buttonToggles.js"></script>
 </head>
-
+<header>
 <body>
-    <script src="../assets/JS/buttonToggles.js"></script>
-    <script src="../assets/JS/menu.js"></script>
-    
-    <header>
     <div id="menu-overlay"></div>
     <div id="menu-container">
-        <img class="close-btn" src="imgs/close.svg" alt="">
         <a class="active" href="#">Home</a>
         <a href="#">About Us</a>
         <a href="#">FAQS</a>
@@ -34,10 +28,13 @@
     </div>
     <div class="header">
         <div class="menu-search">
-            <img class="menu-toggle" src="../assets/images/hamburger.png" alt="">
+            <img class="menu-toggle" src="imgs/menu-bar.svg" alt="">
 
 
-                <img src="../assets/images/search.png" alt="">
+            <div class="search-container">
+                <input type="text" class="search-input" id="search" placeholder="Search..." onkeyup="filterResults()">
+                <span class="search-icon">🔍</span>
+                <div class="results" id="results"></div>
             </div>
         </div>
         <div class="language-switch">
@@ -45,7 +42,7 @@
             <h3>EN</h3>
         </div>
         <a href="#">
-            <img src="../assets/images/title.png" alt="title">
+            <img src="/assets/images/title.png" alt="">
         </a>
         <div class="currency-switch">
             <h3>USD</h3>
@@ -64,8 +61,6 @@
             <h3>SAR</h3>
         </div>
     </div>
-    
-
 </header>
 </body>
 </html>

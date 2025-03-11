@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     container.innerHTML = htmlString;
 
-    // Add click event listener to each product card
+    // add click event listener to each product card (navigates to product details page)
     const productCards = document.querySelectorAll('.product-card');
     productCards.forEach(card => {
         card.addEventListener('click', () => {

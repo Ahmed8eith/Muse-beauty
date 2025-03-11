@@ -1,3 +1,5 @@
+
+/* Footer container styling */
 footer {
   background-color: rgba(235, 235, 232, 1);
   display: flex;
@@ -5,50 +7,59 @@ footer {
   align-items: center;
   margin-top: 50px;
   flex-direction: column;
-  padding: 40px 20px;  /* Increased top/bottom padding */
-  min-height: 1200px;  /* Increased overall footer height */
+  padding: 40px 20px;  
+  min-height: 1200px;  
 }
 
+/* Title image styling */
 .title {
   display: block;
-  width: 600px;        /* Bigger title image */
-  padding-top: 70px;   /* Increased vertical spacing */
+  width: 600px;        
+  padding-top: 70px;   
   padding-bottom: 70px;
 }
 
+   /* Navigation Section Styles */
+
+/* Container for navigation links */
 .nav {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 1200px;    /* Wider container */
-  margin: 30px auto 0 auto; /* Increased top margin */
-  padding-top: 70px;   /* Increased padding for a larger gap */
+  max-width: 1200px;   
+  margin: 30px auto 0 auto; 
+  padding-top: 70px;  
   padding-bottom: 150px;
 }
 
+/* Top and bottom border for nav section */
 .border {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+/* Flex container for each nav column */
 .nav > div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* Navigation headings */
 .nav h1 {
   color: rgba(65, 48, 38, 1);
   font-weight: 400;
   font-family: sans-serif;
-  font-size: 24px;  /* Bigger heading text */
+  font-size: 24px;  
 }
 
+/* Gap between items in each nav column */
 .nav-content {
-  gap: 25px;  /* Increased gap between items */
+  gap: 25px;  
 }
 
+/* Navigation button styling */
 .nav-btn {
   border: none;
   font-weight: 500;
@@ -58,11 +69,14 @@ footer {
   background-color: transparent;
   transition: transform 0.2s ease-in-out;
 }
-
 .nav-btn:hover {
   transform: scale(1.1);
 }
 
+
+/* Subscribe Box Styles*/
+
+/* Container for subscribe input and button */
 .subscribe-box {
   display: inline-flex;
   color: #413026;
@@ -75,6 +89,8 @@ footer {
   height: 60px;
 }
 
+
+/* Email input field styling */
 .sub-input {
   border: none;
   outline: none;
@@ -86,318 +102,327 @@ footer {
   background-color: transparent;  
 }
 
+
+/* Placeholder styling for the email input */
 .sub-input::placeholder {
   color: rgba(65, 48, 38, 1); 
   opacity: 1;     
 }
 
 
+/* Subscribe button styling */
 .subscribe-button {
   border: none;
   outline: none;
   background-color: rgba(217, 217, 217, 1);
-  padding: 10px 20px;  /* Increased padding */
+  padding: 10px 20px; 
   cursor: pointer;
   text-transform: uppercase;
-  font-size: 16px;     /* Larger text */
+  font-size: 16px;    
   color: #413026;
   transition: transform 0.2s ease-in-out;
 }
-
 .subscribe-button:hover {
   transform: scale(1.01);
 }
 
+
+
+/*Contacts & Payment Styles*/
+
+/* Container for contacts and payment sections */
 .contacts-payment {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  gap: 25px;          /* Increased gap between contacts and payment */
-  margin-top: -50px;  /* Adjusted margin to align visually */
+  gap: 25px;         
+  margin-top: -50px; 
 }
 
+
+/* Styling for footer contacts section */
 .footer-contacts {
-  margin-left: 50px;  /* Increased margin */
+  margin-left: 50px; 
 }
 
+/* Styling for payment section */
 .payment {
-  margin-right: 30px; /* Increased margin */
+  margin-right: 30px; 
 }
 
+/* Payment icons sizing */
 .payment img {
-  width: 60px;        /* Bigger payment icons */
+  width: 60px;        
   height: auto;
 }
 
+/* Common gab between icons  */
 .footer-contacts,
 .payment {
   display: flex;
-  gap: 25px;          /* Bigger gap between icons */
+  gap: 25px;         
 }
 
-  /* Responsive adjustments for mid screens */
-  @media screen and (max-width: 800px) {
-    .title {
-      width: 80%;
-      max-width: 350px; /* reduced from 400px */
-      padding-top: 30px; /* reduced from 40px */
-      padding-bottom: 30px; /* reduced from 40px */
-    }
-  
-    .nav {
-      max-width: 100%;
-      flex-wrap: wrap;
-      padding-top: 30px; /* reduced from 40px */
-      padding-bottom: 60px; /* reduced from 80px */
-      gap: 15px;
-    }
-  
-    .nav h1 {
-      font-size: 18px; /* reduced from 20px */
-    }
-  
-    .nav-btn {
-      font-size: 12px; /* reduced from 13px */
-    }
-  
-    .subscribe-box {
-      margin: 20px auto; /* reduced from 30px */
-      width: 90%;
-    }
-  
-    .sub-input {
-      width: 100%;
-      padding: 8px; /* reduced from 10px */
-      font-size: 12px; /* reduced from 13px */
-    }
-  
-    .subscribe-button {
-      padding: 6px 12px; /* reduced from 8px 16px */
-      font-size: 12px; /* reduced from 13px */
-    }
-  
-    .contacts-payment {
-      margin-top: -15px; /* reduced from -30px */
-    }
-  
-    .payment img {
-      width: 40px; /* reduced from 50px */
-      height: auto;
-    }
-  }
-  
-  /* Responsive adjustments for small screens */
-  @media screen and (max-width: 480px) {
-    .title {
-      width: 80%;
-      max-width: 280px; /* reduced from 300px */
-      padding-top: 25px; /* reduced from 30px */
-      padding-bottom: 25px; /* reduced from 30px */
-    }
-  
-    .nav {
-      flex-direction: column;
-      align-items: center;
-      padding-top: 15px; /* reduced from 20px */
-      padding-bottom: 15px; /* reduced from 20px */
-      gap: 15px; /* reduced from 20px */
-    }
-  
-    .nav h1 {
-      font-size: 16px; /* reduced from 18px */
-    }
-  
-    .nav-btn {
-      font-size: 13px; /* reduced from 14px */
-      margin: 3px 0; /* reduced from 5px 0 */
-    }
-  
-    .border {
-      padding: 8px 0; /* reduced from 10px 0 */
-    }
-  
-    .subscribe-box {
-      margin: 15px auto; /* reduced from 20px */
-      width: 90%;
-    }
-  
-    .sub-input {
-      width: 100%;
-      font-size: 13px; /* reduced slightly */
-      padding: 8px; /* reduced from 10px */
-    }
-  
-    .subscribe-button {
-      font-size: 13px; /* reduced from 14px */
-      padding: 6px 12px; /* reduced from 8px 16px */
-    }
-  
-    .contacts-payment {
-      flex-direction: column;
-      align-items: center;
-      margin-top: 15px; /* reduced from 20px */
-    }
-  
-    .footer-contacts {
-      margin-left: 0;
-    }
-  
-    .payment {
-      margin-right: 0;
-    }
-  
-    .footer-contacts,
-    .payment {
-      gap: 10px;
-    }
-  
-    .footer-contacts img {
-      width: 18px; /* reduced from 20px */
-      height: auto;
-    }
-  
-    .payment img {
-      width: 40px; /* reduced from 50px */
-      height: auto;
-    }
-  }
-  
 
-/* Responsive adjustments for mid screens */
+/* Responsive Styles: Mid Screens (max-width: 800px)*/
+
+/* First set of responsive adjustments for mid screens */
 @media screen and (max-width: 800px) {
-    /* Scale down the title image */
-    .title {
-      width: 80%;
-      max-width: 400px;
-      padding-top: 40px;
-      padding-bottom: 40px;
-    }
-  
-    /* adjust nav container spacing, allow wrapping */
-    .nav {
-      max-width: 100%;
-      flex-wrap: wrap;
-      padding-top: 40px;
-      padding-bottom: 80px;
-      gap: 20px;
-    }
-  
-    /* Reduce heading and button sizes */
-    .nav h1 {
-      font-size: 20px;
-    }
-  
-    .nav-btn {
-      font-size: 13px;
-    }
-  
-    /* Make subscribe box and its elements responsive */
-    .subscribe-box {
-      margin: 30px auto;
-      width: 90%;
-    }
-  
-    .sub-input {
-      width: 100%;
-      padding: 10px;
-      font-size: 13px;
-    }
-  
-    .subscribe-button {
-      padding: 8px 16px;
-      font-size: 13px;
-    }
-  
-    /* adjust contacts-payment section */
-    .contacts-payment {
-      margin-top: -30px;
-    }
-  
-    /* Scale down payment icons */
-    .payment img {
-      width: 50px;
-      height: auto;
-    }
+  .title {
+    width: 80%;
+    max-width: 350px; /* reduced from 400px */
+    padding-top: 30px; /* reduced from 40px */
+    padding-bottom: 30px; /* reduced from 40px */
   }
-  
-  /* responsive adjustments for small screens */
-  @media screen and (max-width: 480px) {
-    .title {
-      width: 80%;
-      max-width: 300px;
-      padding-top: 30px;
-      padding-bottom: 30px;
-    }
-  
-    /* Stack nav sections vertically */
-    .nav {
-      flex-direction: column;
-      align-items: center;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      gap: 20px;
-    }
-  
-    .nav h1 {
-      font-size: 18px;
-    }
-  
-    .nav-btn {
-      font-size: 14px;
-      margin: 5px 0;
-    }
-  
-    .border {
-      padding: 10px 0;
-    }
-  
-    /* djust subscribe box */
-    .subscribe-box {
-      margin: 20px auto;
-      width: 90%;
-    }
-  
-    .sub-input {
-      width: 100%;
-      font-size: 14px;
-      padding: 10px;
-    }
-  
-    .subscribe-button {
-      font-size: 14px;
-      padding: 8px 16px;
-    }
-  
-    /* stack contacts and payment vertically, adjust margins */
-    .contacts-payment {
-      flex-direction: column;
-      align-items: center;
-      margin-top: 20px;
-    }
-  
-    .footer-contacts {
-      margin-left: 0;
-    }
-  
-    .payment {
-      margin-right: 0;
-    }
-  
-    /* adjust gap and icon sizes */
-    .footer-contacts,
-    .payment {
-      gap: 10px;
-    }
-  
-    .footer-contacts img{
-        width: 20px;
-        height: auto;
-    }
 
-    .payment img {
-      width: 50px;
-      height: auto;
-    }
+  .nav {
+    max-width: 100%;
+    flex-wrap: wrap;
+    padding-top: 30px; /* reduced from 40px */
+    padding-bottom: 60px; /* reduced from 80px */
+    gap: 15px;
+  }
+
+  .nav h1 {
+    font-size: 18px; /* reduced from 20px */
+  }
+
+  .nav-btn {
+    font-size: 12px; /* reduced from 13px */
+  }
+
+  .subscribe-box {
+    margin: 20px auto; /* reduced from 30px */
+    width: 90%;
+  }
+
+  .sub-input {
+    width: 100%;
+    padding: 8px; /* reduced from 10px */
+    font-size: 12px; /* reduced from 13px */
+  }
+
+  .subscribe-button {
+    padding: 6px 12px; /* reduced from 8px 16px */
+    font-size: 12px; /* reduced from 13px */
+  }
+
+  .contacts-payment {
+    margin-top: -15px; /* reduced from -30px */
+  }
+
+  .payment img {
+    width: 40px; /* reduced from 50px */
+    height: auto;
+  }
+
+  /* Scale down the title image */
+  .title {
+    width: 80%;
+    max-width: 400px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  /* Adjust nav container spacing and allow wrapping */
+  .nav {
+    max-width: 100%;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    gap: 20px;
+  }
+
+  /* Reduce heading and button sizes */
+  .nav h1 {
+    font-size: 20px;
   }
   
+  .nav-btn {
+    font-size: 13px;
+  }
+  
+  /* subscribe box and its elements responsive */
+  .subscribe-box {
+    margin: 30px auto;
+    width: 90%;
+  }
+  
+  .sub-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 13px;
+  }
+  
+  .subscribe-button {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  
+  /* Adjust contacts-payment section */
+  .contacts-payment {
+    margin-top: -30px;
+  }
+  
+  /* Scale down payment icons */
+  .payment img {
+    width: 50px;
+    height: auto;
+  }
+}
+
+/* Responsive Styles: Small Screens (max-width: 480px) */
+
+/* First set of responsive adjustments for small screens */
+@media screen and (max-width: 480px) {
+  .title {
+    width: 80%;
+    max-width: 280px; /* reduced from 300px */
+    padding-top: 25px; /* reduced from 30px */
+    padding-bottom: 25px; /* reduced from 30px */
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px; /* reduced from 20px */
+    padding-bottom: 15px; /* reduced from 20px */
+    gap: 15px; /* reduced from 20px */
+  }
+
+  .nav h1 {
+    font-size: 16px; /* reduced from 18px */
+  }
+
+  .nav-btn {
+    font-size: 13px; /* reduced from 14px */
+    margin: 3px 0; /* reduced from 5px 0 */
+  }
+
+  .border {
+    padding: 8px 0; /* reduced from 10px 0 */
+  }
+
+  .subscribe-box {
+    margin: 15px auto; /* reduced from 20px */
+    width: 90%;
+  }
+
+  .sub-input {
+    width: 100%;
+    font-size: 13px; /* reduced slightly */
+    padding: 8px; /* reduced from 10px */
+  }
+
+  .subscribe-button {
+    font-size: 13px; /* reduced from 14px */
+    padding: 6px 12px; /* reduced from 8px 16px */
+  }
+
+  .contacts-payment {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px; /* reduced from 20px */
+  }
+
+  .footer-contacts {
+    margin-left: 0;
+  }
+
+  .payment {
+    margin-right: 0;
+  }
+
+  .footer-contacts,
+  .payment {
+    gap: 10px;
+  }
+
+  .footer-contacts img {
+    width: 18px; /* reduced from 20px */
+    height: auto;
+  }
+
+  .payment img {
+    width: 40px; /* reduced from 50px */
+    height: auto;
+  }
+
+  .title {
+    width: 80%;
+    max-width: 300px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  /* Stack nav sections vertically */
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 20px;
+  }
+
+  .nav h1 {
+    font-size: 18px;
+  }
+
+  .nav-btn {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+
+  .border {
+    padding: 10px 0;
+  }
+
+  /* Adjust subscribe box */
+  .subscribe-box {
+    margin: 20px auto;
+    width: 90%;
+  }
+
+  .sub-input {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .subscribe-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  /* Stack contacts and payment vertically, adjust margins */
+  .contacts-payment {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .footer-contacts {
+    margin-left: 0;
+  }
+
+  .payment {
+    margin-right: 0;
+  }
+
+  /* Adjust gap and icon sizes */
+  .footer-contacts,
+  .payment {
+    gap: 10px;
+  }
+
+  .footer-contacts img {
+    width: 20px;
+    height: auto;
+  }
+
+  .payment img {
+    width: 50px;
+    height: auto;
+  }
+}

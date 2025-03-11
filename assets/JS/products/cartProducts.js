@@ -38,10 +38,10 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="cart-buttons">
               <div class='counter-group'>
                   <button class="counter">-</button>
-                  <input class="counter-input " type="number" value="1" min="1">
+                  <input class="counter-input " type="number" value="1" min="1" readonly>
                   <button class="counter">+</button>
               </div>
-            <p class="price-price">${product.price} sar</p>
+            <p class="unique-price">${product.price} sar</p>
           </div>
         </div>
       </div>

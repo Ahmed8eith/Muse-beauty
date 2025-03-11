@@ -1,21 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-  /**
-   * Setup toggle functionality for a group of buttons.
-   * @param {string} containerSelector 
-   * @param {string} defaultColor 
-   * @param {string} activeColor 
-   */
+  
   function setupToggleContainers(containerSelector, defaultColor, activeColor) {
     const containers = document.querySelectorAll(containerSelector);
     containers.forEach(container => {
       const items = container.querySelectorAll('h3');
       items.forEach(item => {
-        // Set default color on page load
-        item.style.color = defaultColor;
+       
         item.addEventListener('click', () => {
           // Reset color for all items in this container
           items.forEach(i => i.style.color = defaultColor);
-          // Highlight the clicked item
+          // togle the clicked item
           item.style.color = activeColor;
         });
       });
@@ -23,21 +17,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   // Desktop toggles
-  setupToggleContainers('.language-switch', '#413026', '#ED8A19');
-  setupToggleContainers('.currency-switch', '#413026', '#ED8A19');
+  setupToggleContainers('.language-switch', 'rgba(65, 48, 38, 1)', 'rgba(237, 138, 25, 1)');
+  setupToggleContainers('.currency-switch', 'rgba(65, 48, 38, 1)', 'rgba(237, 138, 25, 1)');
   
   // Mobile side toggles
-  setupToggleContainers('.language-switch-mob', 'white', '#ED8A19');
-  setupToggleContainers('.currency-switch-mob', 'white', '#ED8A19');
+  setupToggleContainers('.language-switch-mob', 'white', 'rgba(237, 138, 25, 1)');
+  setupToggleContainers('.currency-switch-mob', 'white', 'rgba(237, 138, 25, 1)');
 
-  // Shopping page toggles - removed the nested DOMContentLoaded!
+  // Shopping page togles
   const filterBtns = document.querySelectorAll(".filter-btn");
   const activeColor = "rgba(237, 138, 25, 1)"; 
   filterBtns.forEach(btn => {
     btn.addEventListener("click", function() {
       // Set all buttons to black
       filterBtns.forEach(b => b.style.color = "black");
-      // Highlight the clicked button
+      // toggle the clicked button
       this.style.color = activeColor;
     });
   });
@@ -49,11 +43,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   buttons.forEach((button, index) => {
     button.addEventListener('click', () => {
+      // if the clicked button is already toggled, sets it back to default
       if (answers[index].classList.contains('show')) {
         answers[index].classList.remove('show');
         button.style.color = 'rgba(65, 48, 38, 1)';
         questions[index].style.color = 'rgba(65, 48, 38, 1)';
         button.textContent = '+';
+
+        // else sets all buttons to default then activates the target button
       } else {
         buttons.forEach((btn, i) => {
           btn.style.color = 'rgba(65, 48, 38, 1)';
@@ -76,14 +73,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const counterButtons = container.querySelectorAll('.counter');
       const counterInput = container.querySelector('.counter-input');
 
+      // prevents errors if container doesnt exist 
       if (!counterInput) return;
 
       counterButtons.forEach(button => {
         button.addEventListener('click', function() {
           let currentValue = parseInt(counterInput.value) || 1;
+          //if buttons text is '+' adds 1
           if (this.textContent.trim() === '+') {
             counterInput.value = currentValue + 1;
+              //else if buttons text is '-' adds 1
           } else if (this.textContent.trim() === '-') {
+            // makes sure the counter doesnt go lower than 1
             if (currentValue > 1) {
               counterInput.value = currentValue - 1;
             }
